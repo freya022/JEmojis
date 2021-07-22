@@ -1,0 +1,10 @@
+# Default ignored files
+/.idea/workspace.xml
+
+*.iml
+.idea
+target
+/src/test
+
+logs-*
+data_cache
