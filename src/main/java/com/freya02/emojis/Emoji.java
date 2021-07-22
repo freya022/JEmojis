@@ -3,6 +3,7 @@ package com.freya02.emojis;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public final class Emoji {
 	private final String subpage;
@@ -46,6 +47,12 @@ public final class Emoji {
 		}
 
 		return list;
+	}
+
+	public List<String> getUnicodeCodepoints() {
+		return unicode.codePoints()
+				.mapToObj(codepoint -> "U+" + Integer.toHexString(codepoint).toUpperCase())
+				.collect(Collectors.toList());
 	}
 
 	@Override
