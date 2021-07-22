@@ -108,6 +108,15 @@ class EmojiDL {
 							final String shortcode = shortcodeMatcher.group(1);
 							final String social = shortcodeMatcher.group(2);
 
+							if (shortcode.startsWith("flag-")) {
+								final String flag = shortcode.replace('-', '_');
+								shortcodes.clear(); //Flag shortcode should be unique
+								shortcodes.add(flag);
+								LOGGER.info("Added flag {}", flag);
+
+								break;
+							}
+
 							//Trying to adhere more to discord shortcode naming scheme,
 							// comparing example such as "cow" and "cow head" reveals that it uses either Slack or Github shortcodes,
 							// But i'd go with Github as https://emojipedia.org/star-struck/ shows github using underscores instead of dashes (like Slack)

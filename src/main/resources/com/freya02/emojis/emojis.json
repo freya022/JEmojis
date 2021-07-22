@@ -213,7 +213,7 @@
       "name": "Flag: Zimbabwe",
       "unicode": "🇿🇼",
       "shortcodes": [
-        "zimbabwe"
+        "flag_zw"
       ]
     },
     "flag-bangladesh": {
@@ -221,7 +221,7 @@
       "name": "Flag: Bangladesh",
       "unicode": "🇧🇩",
       "shortcodes": [
-        "bangladesh"
+        "flag_bd"
       ]
     },
     "man-dark-skin-tone-curly-hair": {
@@ -245,7 +245,7 @@
       "name": "Flag: Algeria",
       "unicode": "🇩🇿",
       "shortcodes": [
-        "algeria"
+        "flag_dz"
       ]
     },
     "zombie": {
@@ -381,7 +381,7 @@
       "name": "Flag: Tunisia",
       "unicode": "🇹🇳",
       "shortcodes": [
-        "tunisia"
+        "flag_tn"
       ]
     },
     "kiss-person-person-dark-skin-tone-medium-light-skin-tone": {
@@ -493,7 +493,7 @@
       "name": "Flag: Micronesia",
       "unicode": "🇫🇲",
       "shortcodes": [
-        "micronesia"
+        "flag_fm"
       ]
     },
     "person-getting-haircut": {
@@ -685,7 +685,7 @@
       "name": "Flag: Switzerland",
       "unicode": "🇨🇭",
       "shortcodes": [
-        "switzerland"
+        "flag_ch"
       ]
     },
     "magnet": {
@@ -725,7 +725,7 @@
       "name": "Flag: Russia",
       "unicode": "🇷🇺",
       "shortcodes": [
-        "ru"
+        "flag_ru"
       ]
     },
     "woman-running": {
@@ -797,7 +797,7 @@
       "name": "Flag: Bolivia",
       "unicode": "🇧🇴",
       "shortcodes": [
-        "bolivia"
+        "flag_bo"
       ]
     },
     "man-lifting-weights-medium-skin-tone": {
@@ -895,7 +895,7 @@
       "name": "Flag: Syria",
       "unicode": "🇸🇾",
       "shortcodes": [
-        "syria"
+        "flag_sy"
       ]
     },
     "man-light-skin-tone-blond-hair": {
@@ -1583,7 +1583,7 @@
       "name": "Flag: Georgia",
       "unicode": "🇬🇪",
       "shortcodes": [
-        "georgia"
+        "flag_ge"
       ]
     },
     "lying-face": {
@@ -1704,7 +1704,7 @@
       "name": "Flag: Pitcairn Islands",
       "unicode": "🇵🇳",
       "shortcodes": [
-        "pitcairn_islands"
+        "flag_pn"
       ]
     },
     "middle-finger-medium-light-skin-tone": {
@@ -1897,7 +1897,7 @@
       "name": "Flag: India",
       "unicode": "🇮🇳",
       "shortcodes": [
-        "india"
+        "flag_in"
       ]
     },
     "racing-car": {
@@ -1993,7 +1993,7 @@
       "name": "Flag: Latvia",
       "unicode": "🇱🇻",
       "shortcodes": [
-        "latvia"
+        "flag_lv"
       ]
     },
     "lady-beetle": {
@@ -2017,7 +2017,7 @@
       "name": "Flag: South Sudan",
       "unicode": "🇸🇸",
       "shortcodes": [
-        "south_sudan"
+        "flag_ss"
       ]
     },
     "woman-biking-medium-skin-tone": {
@@ -2193,7 +2193,7 @@
       "name": "Flag: Congo - Kinshasa",
       "unicode": "🇨🇩",
       "shortcodes": [
-        "congo_kinshasa"
+        "flag_cd"
       ]
     },
     "woman-in-tuxedo-medium-light-skin-tone": {
@@ -2209,7 +2209,7 @@
       "name": "Flag: Svalbard \u0026 Jan Mayen",
       "unicode": "🇸🇯",
       "shortcodes": [
-        "svalbard_jan_mayen"
+        "flag_sj"
       ]
     },
     "woman-walking-medium-skin-tone": {
@@ -2257,7 +2257,7 @@
       "name": "Flag: Pakistan",
       "unicode": "🇵🇰",
       "shortcodes": [
-        "pakistan"
+        "flag_pk"
       ]
     },
     "woman-playing-handball-medium-light-skin-tone": {
@@ -2417,7 +2417,7 @@
       "name": "Flag: Burkina Faso",
       "unicode": "🇧🇫",
       "shortcodes": [
-        "burkina_faso"
+        "flag_bf"
       ]
     },
     "mrs-claus-dark-skin-tone": {
@@ -2545,7 +2545,7 @@
       "name": "Flag: Venezuela",
       "unicode": "🇻🇪",
       "shortcodes": [
-        "venezuela"
+        "flag_ve"
       ]
     },
     "man-cartwheeling-medium-skin-tone": {
@@ -2601,7 +2601,7 @@
       "name": "Flag: Ethiopia",
       "unicode": "🇪🇹",
       "shortcodes": [
-        "ethiopia"
+        "flag_et"
       ]
     },
     "file-folder": {
@@ -2657,7 +2657,7 @@
       "name": "Flag: Brunei",
       "unicode": "🇧🇳",
       "shortcodes": [
-        "brunei"
+        "flag_bn"
       ]
     },
     "princess-light-skin-tone": {
@@ -2730,7 +2730,7 @@
       "name": "Flag: Martinique",
       "unicode": "🇲🇶",
       "shortcodes": [
-        "martinique"
+        "flag_mq"
       ]
     },
     "bagel": {
@@ -2762,7 +2762,7 @@
       "name": "Flag: Kenya",
       "unicode": "🇰🇪",
       "shortcodes": [
-        "kenya"
+        "flag_ke"
       ]
     },
     "woman-dark-skin-tone-curly-hair": {
@@ -2802,7 +2802,7 @@
       "name": "Flag: Honduras",
       "unicode": "🇭🇳",
       "shortcodes": [
-        "honduras"
+        "flag_hn"
       ]
     },
     "office-worker": {
@@ -2858,7 +2858,7 @@
       "name": "Flag: El Salvador",
       "unicode": "🇸🇻",
       "shortcodes": [
-        "el_salvador"
+        "flag_sv"
       ]
     },
     "woman-and-man-holding-hands-dark-skin-tone-medium-light-skin-tone": {
@@ -2914,7 +2914,7 @@
       "name": "Flag: French Southern Territories",
       "unicode": "🇹🇫",
       "shortcodes": [
-        "french_southern_territories"
+        "flag_tf"
       ]
     },
     "person-tipping-hand-dark-skin-tone": {
@@ -2978,7 +2978,7 @@
       "name": "Flag: United States",
       "unicode": "🇺🇸",
       "shortcodes": [
-        "us"
+        "flag_us"
       ]
     },
     "flag-argentina": {
@@ -2986,7 +2986,7 @@
       "name": "Flag: Argentina",
       "unicode": "🇦🇷",
       "shortcodes": [
-        "argentina"
+        "flag_ar"
       ]
     },
     "flag-british-virgin-islands": {
@@ -2994,7 +2994,7 @@
       "name": "Flag: British Virgin Islands",
       "unicode": "🇻🇬",
       "shortcodes": [
-        "british_virgin_islands"
+        "flag_vg"
       ]
     },
     "grinning-face-with-smiling-eyes": {
@@ -3066,7 +3066,7 @@
       "name": "Flag: Dominica",
       "unicode": "🇩🇲",
       "shortcodes": [
-        "dominica"
+        "flag_dm"
       ]
     },
     "woman-gesturing-ok-medium-skin-tone": {
@@ -3123,7 +3123,7 @@
       "name": "Flag: Oman",
       "unicode": "🇴🇲",
       "shortcodes": [
-        "oman"
+        "flag_om"
       ]
     },
     "man-juggling-medium-skin-tone": {
@@ -3267,7 +3267,7 @@
       "name": "Flag: Wales",
       "unicode": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
       "shortcodes": [
-        "wales"
+        "flag_wales"
       ]
     },
     "woman-pouting-medium-dark-skin-tone": {
@@ -3283,7 +3283,7 @@
       "name": "Flag: Colombia",
       "unicode": "🇨🇴",
       "shortcodes": [
-        "colombia"
+        "flag_co"
       ]
     },
     "kiss-woman-man-medium-skin-tone-medium-dark-skin-tone": {
@@ -3411,7 +3411,7 @@
       "name": "Flag: Suriname",
       "unicode": "🇸🇷",
       "shortcodes": [
-        "suriname"
+        "flag_sr"
       ]
     },
     "man-surfing": {
@@ -3459,7 +3459,7 @@
       "name": "Flag: Uruguay",
       "unicode": "🇺🇾",
       "shortcodes": [
-        "uruguay"
+        "flag_uy"
       ]
     },
     "scientist-medium-dark-skin-tone": {
@@ -3515,7 +3515,7 @@
       "name": "Flag: Solomon Islands",
       "unicode": "🇸🇧",
       "shortcodes": [
-        "solomon_islands"
+        "flag_sb"
       ]
     },
     "person-biking-dark-skin-tone": {
@@ -3547,7 +3547,7 @@
       "name": "Flag: Afghanistan",
       "unicode": "🇦🇫",
       "shortcodes": [
-        "afghanistan"
+        "flag_af"
       ]
     },
     "middle-finger-medium-skin-tone": {
@@ -3595,7 +3595,7 @@
       "name": "Flag: Uzbekistan",
       "unicode": "🇺🇿",
       "shortcodes": [
-        "uzbekistan"
+        "flag_uz"
       ]
     },
     "thumbs-up-medium-light-skin-tone": {
@@ -3651,7 +3651,7 @@
       "name": "Flag: Vatican City",
       "unicode": "🇻🇦",
       "shortcodes": [
-        "vatican_city"
+        "flag_va"
       ]
     },
     "volcano": {
@@ -3667,7 +3667,7 @@
       "name": "Flag: San Marino",
       "unicode": "🇸🇲",
       "shortcodes": [
-        "san_marino"
+        "flag_sm"
       ]
     },
     "railway-track": {
@@ -3803,7 +3803,7 @@
       "name": "Flag: Guatemala",
       "unicode": "🇬🇹",
       "shortcodes": [
-        "guatemala"
+        "flag_gt"
       ]
     },
     "two-thirty": {
@@ -3859,7 +3859,7 @@
       "name": "Flag: Turkey",
       "unicode": "🇹🇷",
       "shortcodes": [
-        "tr"
+        "flag_tr"
       ]
     },
     "regional-indicator-symbol-letter-r": {
@@ -3947,7 +3947,7 @@
       "name": "Flag: Guyana",
       "unicode": "🇬🇾",
       "shortcodes": [
-        "guyana"
+        "flag_gy"
       ]
     },
     "regional-indicator-symbol-letter-v": {
@@ -4019,7 +4019,7 @@
       "name": "Flag: Sint Maarten",
       "unicode": "🇸🇽",
       "shortcodes": [
-        "sint_maarten"
+        "flag_sx"
       ]
     },
     "regional-indicator-symbol-letter-c": {
@@ -4155,7 +4155,7 @@
       "name": "Flag: Gabon",
       "unicode": "🇬🇦",
       "shortcodes": [
-        "gabon"
+        "flag_ga"
       ]
     },
     "regional-indicator-symbol-letter-h": {
@@ -4227,7 +4227,7 @@
       "name": "Flag: United Arab Emirates",
       "unicode": "🇦🇪",
       "shortcodes": [
-        "united_arab_emirates"
+        "flag_ae"
       ]
     },
     "women-holding-hands-medium-dark-skin-tone-dark-skin-tone": {
@@ -4371,7 +4371,7 @@
       "name": "Flag: Tanzania",
       "unicode": "🇹🇿",
       "shortcodes": [
-        "tanzania"
+        "flag_tz"
       ]
     },
     "woman-white-hair": {
@@ -4451,7 +4451,7 @@
       "name": "Flag: Diego Garcia",
       "unicode": "🇩🇬",
       "shortcodes": [
-        "diego_garcia"
+        "flag_dg"
       ]
     },
     "frowning-face-with-open-mouth": {
@@ -4631,14 +4631,6 @@
         "mage"
       ]
     },
-    "woman-dancing-dark-skin-tone": {
-      "subpage": "woman-dancing-dark-skin-tone",
-      "name": "Woman Dancing: Dark Skin Tone",
-      "unicode": "💃🏿",
-      "shortcodes": [
-        "woman_dancing_dark_skin_tone"
-      ]
-    },
     "people-with-bunny-ears": {
       "subpage": "people-with-bunny-ears",
       "name": "People with Bunny Ears",
@@ -4647,12 +4639,20 @@
         "dancers"
       ]
     },
+    "woman-dancing-dark-skin-tone": {
+      "subpage": "woman-dancing-dark-skin-tone",
+      "name": "Woman Dancing: Dark Skin Tone",
+      "unicode": "💃🏿",
+      "shortcodes": [
+        "woman_dancing_dark_skin_tone"
+      ]
+    },
     "flag-bahamas": {
       "subpage": "flag-bahamas",
       "name": "Flag: Bahamas",
       "unicode": "🇧🇸",
       "shortcodes": [
-        "bahamas"
+        "flag_bs"
       ]
     },
     "person-getting-haircut-dark-skin-tone": {
@@ -4668,7 +4668,7 @@
       "name": "Flag: Denmark",
       "unicode": "🇩🇰",
       "shortcodes": [
-        "denmark"
+        "flag_dk"
       ]
     },
     "graduation-cap": {
@@ -4692,7 +4692,7 @@
       "name": "Flag: Christmas Island",
       "unicode": "🇨🇽",
       "shortcodes": [
-        "christmas_island"
+        "flag_cx"
       ]
     },
     "woman-frowning-light-skin-tone": {
@@ -4764,7 +4764,7 @@
       "name": "Flag: Åland Islands",
       "unicode": "🇦🇽",
       "shortcodes": [
-        "aland_islands"
+        "flag_ax"
       ]
     },
     "wheel-of-dharma": {
@@ -5236,7 +5236,7 @@
       "name": "Flag: Uganda",
       "unicode": "🇺🇬",
       "shortcodes": [
-        "uganda"
+        "flag_ug"
       ]
     },
     "woman-medium-dark-skin-tone-curly-hair": {
@@ -5476,7 +5476,7 @@
       "name": "Flag: Mauritius",
       "unicode": "🇲🇺",
       "shortcodes": [
-        "mauritius"
+        "flag_mu"
       ]
     },
     "person-in-bed": {
@@ -5757,7 +5757,7 @@
       "name": "Flag: Philippines",
       "unicode": "🇵🇭",
       "shortcodes": [
-        "philippines"
+        "flag_ph"
       ]
     },
     "construction-worker-medium-light-skin-tone": {
@@ -5885,7 +5885,7 @@
       "name": "Flag: Palestinian Territories",
       "unicode": "🇵🇸",
       "shortcodes": [
-        "palestinian_territories"
+        "flag_ps"
       ]
     },
     "man-factory-worker-medium-dark-skin-tone": {
@@ -6213,7 +6213,7 @@
       "name": "Flag: Eritrea",
       "unicode": "🇪🇷",
       "shortcodes": [
-        "eritrea"
+        "flag_er"
       ]
     },
     "mechanic": {
@@ -6229,7 +6229,7 @@
       "name": "Flag: Ireland",
       "unicode": "🇮🇪",
       "shortcodes": [
-        "ireland"
+        "flag_ie"
       ]
     },
     "peanuts": {
@@ -6245,7 +6245,7 @@
       "name": "Flag: Yemen",
       "unicode": "🇾🇪",
       "shortcodes": [
-        "yemen"
+        "flag_ye"
       ]
     },
     "elevator": {
@@ -6309,7 +6309,7 @@
       "name": "Flag: Egypt",
       "unicode": "🇪🇬",
       "shortcodes": [
-        "egypt"
+        "flag_eg"
       ]
     },
     "dizzy": {
@@ -6325,7 +6325,7 @@
       "name": "Flag: Romania",
       "unicode": "🇷🇴",
       "shortcodes": [
-        "romania"
+        "flag_ro"
       ]
     },
     "flag-south-georgia-south-sandwich-islands": {
@@ -6333,7 +6333,7 @@
       "name": "Flag: South Georgia \u0026 South Sandwich Islands",
       "unicode": "🇬🇸",
       "shortcodes": [
-        "south_georgia_south_sandwich_islands"
+        "flag_gs"
       ]
     },
     "books": {
@@ -6525,7 +6525,7 @@
       "name": "Flag: Eswatini",
       "unicode": "🇸🇿",
       "shortcodes": [
-        "swaziland"
+        "flag_sz"
       ]
     },
     "up-right-arrow": {
@@ -6573,7 +6573,7 @@
       "name": "Flag: British Indian Ocean Territory",
       "unicode": "🇮🇴",
       "shortcodes": [
-        "british_indian_ocean_territory"
+        "flag_io"
       ]
     },
     "man-bowing-light-skin-tone": {
@@ -6838,7 +6838,7 @@
       "name": "Flag: Dominican Republic",
       "unicode": "🇩🇴",
       "shortcodes": [
-        "dominican_republic"
+        "flag_do"
       ]
     },
     "fairy-medium-skin-tone": {
@@ -6886,7 +6886,7 @@
       "name": "Flag: St. Martin",
       "unicode": "🇲🇫",
       "shortcodes": [
-        "st_martin"
+        "flag_mf"
       ]
     },
     "woman-office-worker": {
@@ -7142,7 +7142,7 @@
       "name": "Flag: Mali",
       "unicode": "🇲🇱",
       "shortcodes": [
-        "mali"
+        "flag_ml"
       ]
     },
     "safety-vest": {
@@ -7158,7 +7158,7 @@
       "name": "Flag: Tuvalu",
       "unicode": "🇹🇻",
       "shortcodes": [
-        "tuvalu"
+        "flag_tv"
       ]
     },
     "keycap-digit-zero": {
@@ -7358,7 +7358,7 @@
       "name": "Flag: Estonia",
       "unicode": "🇪🇪",
       "shortcodes": [
-        "estonia"
+        "flag_ee"
       ]
     },
     "man-cook-medium-light-skin-tone": {
@@ -7382,7 +7382,7 @@
       "name": "Flag: French Guiana",
       "unicode": "🇬🇫",
       "shortcodes": [
-        "french_guiana"
+        "flag_gf"
       ]
     },
     "man-in-steamy-room": {
@@ -7510,7 +7510,7 @@
       "name": "Flag: North Korea",
       "unicode": "🇰🇵",
       "shortcodes": [
-        "north_korea"
+        "flag_kp"
       ]
     },
     "woman-lifting-weights-light-skin-tone": {
@@ -7582,7 +7582,7 @@
       "name": "Flag: Thailand",
       "unicode": "🇹🇭",
       "shortcodes": [
-        "thailand"
+        "flag_th"
       ]
     },
     "flag-belize": {
@@ -7590,7 +7590,7 @@
       "name": "Flag: Belize",
       "unicode": "🇧🇿",
       "shortcodes": [
-        "belize"
+        "flag_bz"
       ]
     },
     "love-you-gesture-medium-light-skin-tone": {
@@ -7790,7 +7790,7 @@
       "name": "Flag: St. Vincent \u0026 Grenadines",
       "unicode": "🇻🇨",
       "shortcodes": [
-        "st_vincent_grenadines"
+        "flag_vc"
       ]
     },
     "diamond-suit": {
@@ -7838,7 +7838,7 @@
       "name": "Flag: Cyprus",
       "unicode": "🇨🇾",
       "shortcodes": [
-        "cyprus"
+        "flag_cy"
       ]
     },
     "transgender-symbol": {
@@ -8062,7 +8062,7 @@
       "name": "Flag: Singapore",
       "unicode": "🇸🇬",
       "shortcodes": [
-        "singapore"
+        "flag_sg"
       ]
     },
     "giraffe": {
@@ -8278,7 +8278,7 @@
       "name": "Flag: Hungary",
       "unicode": "🇭🇺",
       "shortcodes": [
-        "hungary"
+        "flag_hu"
       ]
     },
     "full-moon-face": {
@@ -8334,7 +8334,7 @@
       "name": "Flag: Aruba",
       "unicode": "🇦🇼",
       "shortcodes": [
-        "aruba"
+        "flag_aw"
       ]
     },
     "pinched-fingers-medium-dark-skin-tone": {
@@ -8656,7 +8656,7 @@
       "name": "Flag: Moldova",
       "unicode": "🇲🇩",
       "shortcodes": [
-        "moldova"
+        "flag_md"
       ]
     },
     "orange-heart": {
@@ -8800,7 +8800,7 @@
       "name": "Flag: England",
       "unicode": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
       "shortcodes": [
-        "england"
+        "flag_england"
       ]
     },
     "backhand-index-pointing-right-light-skin-tone": {
@@ -8872,7 +8872,7 @@
       "name": "Flag: Jamaica",
       "unicode": "🇯🇲",
       "shortcodes": [
-        "jamaica"
+        "flag_jm"
       ]
     },
     "flexed-biceps-dark-skin-tone": {
@@ -8904,7 +8904,7 @@
       "name": "Flag: Cuba",
       "unicode": "🇨🇺",
       "shortcodes": [
-        "cuba"
+        "flag_cu"
       ]
     },
     "man-bowing-medium-skin-tone": {
@@ -8944,7 +8944,7 @@
       "name": "Flag: Malta",
       "unicode": "🇲🇹",
       "shortcodes": [
-        "malta"
+        "flag_mt"
       ]
     },
     "raised-fist-medium-light-skin-tone": {
@@ -9393,7 +9393,7 @@
       "name": "Flag: Cape Verde",
       "unicode": "🇨🇻",
       "shortcodes": [
-        "cape_verde"
+        "flag_cv"
       ]
     },
     "poultry-leg": {
@@ -9697,7 +9697,7 @@
       "name": "Flag: Albania",
       "unicode": "🇦🇱",
       "shortcodes": [
-        "albania"
+        "flag_al"
       ]
     },
     "man-with-veil-medium-light-skin-tone": {
@@ -9753,7 +9753,7 @@
       "name": "Flag: Gibraltar",
       "unicode": "🇬🇮",
       "shortcodes": [
-        "gibraltar"
+        "flag_gi"
       ]
     },
     "person-in-steamy-room-light-skin-tone": {
@@ -9777,8 +9777,7 @@
       "name": "Flag: United Kingdom",
       "unicode": "🇬🇧",
       "shortcodes": [
-        "uk",
-        "gb"
+        "flag_gb"
       ]
     },
     "woman-construction-worker-medium-light-skin-tone": {
@@ -9914,7 +9913,7 @@
       "name": "Flag: Mozambique",
       "unicode": "🇲🇿",
       "shortcodes": [
-        "mozambique"
+        "flag_mz"
       ]
     },
     "metro": {
@@ -10530,7 +10529,7 @@
       "name": "Flag: Niger",
       "unicode": "🇳🇪",
       "shortcodes": [
-        "niger"
+        "flag_ne"
       ]
     },
     "flag-serbia": {
@@ -10538,7 +10537,7 @@
       "name": "Flag: Serbia",
       "unicode": "🇷🇸",
       "shortcodes": [
-        "serbia"
+        "flag_rs"
       ]
     },
     "woman-getting-massage-light-skin-tone": {
@@ -10562,7 +10561,7 @@
       "name": "Flag: Tokelau",
       "unicode": "🇹🇰",
       "shortcodes": [
-        "tokelau"
+        "flag_tk"
       ]
     },
     "robot": {
@@ -10826,7 +10825,7 @@
       "name": "Flag: Poland",
       "unicode": "🇵🇱",
       "shortcodes": [
-        "poland"
+        "flag_pl"
       ]
     },
     "woman-medium-dark-skin-tone-blond-hair": {
@@ -10858,7 +10857,7 @@
       "name": "Flag: Senegal",
       "unicode": "🇸🇳",
       "shortcodes": [
-        "senegal"
+        "flag_sn"
       ]
     },
     "fly": {
@@ -10962,7 +10961,7 @@
       "name": "Flag: Antigua \u0026 Barbuda",
       "unicode": "🇦🇬",
       "shortcodes": [
-        "antigua_barbuda"
+        "flag_ag"
       ]
     },
     "face-without-mouth": {
@@ -11090,7 +11089,7 @@
       "name": "Flag: Libya",
       "unicode": "🇱🇾",
       "shortcodes": [
-        "libya"
+        "flag_ly"
       ]
     },
     "record-button": {
@@ -11202,7 +11201,7 @@
       "name": "Flag: Papua New Guinea",
       "unicode": "🇵🇬",
       "shortcodes": [
-        "papua_new_guinea"
+        "flag_pg"
       ]
     },
     "man-guard-medium-light-skin-tone": {
@@ -11218,7 +11217,7 @@
       "name": "Flag: Australia",
       "unicode": "🇦🇺",
       "shortcodes": [
-        "australia"
+        "flag_au"
       ]
     },
     "cat-with-wry-smile": {
@@ -11410,7 +11409,7 @@
       "name": "Flag: Israel",
       "unicode": "🇮🇱",
       "shortcodes": [
-        "israel"
+        "flag_il"
       ]
     },
     "astronaut": {
@@ -11610,7 +11609,7 @@
       "name": "Flag: Guinea-Bissau",
       "unicode": "🇬🇼",
       "shortcodes": [
-        "guinea_bissau"
+        "flag_gw"
       ]
     },
     "kiss-woman-man-dark-skin-tone-light-skin-tone": {
@@ -11634,7 +11633,7 @@
       "name": "Flag: U.S. Outlying Islands",
       "unicode": "🇺🇲",
       "shortcodes": [
-        "us_outlying_islands"
+        "flag_um"
       ]
     },
     "man-construction-worker-medium-light-skin-tone": {
@@ -11690,7 +11689,7 @@
       "name": "Flag: Indonesia",
       "unicode": "🇮🇩",
       "shortcodes": [
-        "indonesia"
+        "flag_id"
       ]
     },
     "hugging-face": {
@@ -11714,7 +11713,7 @@
       "name": "Flag: Wallis \u0026 Futuna",
       "unicode": "🇼🇫",
       "shortcodes": [
-        "wallis_futuna"
+        "flag_wf"
       ]
     },
     "person-golfing-medium-dark-skin-tone": {
@@ -11762,7 +11761,7 @@
       "name": "Flag: Comoros",
       "unicode": "🇰🇲",
       "shortcodes": [
-        "comoros"
+        "flag_km"
       ]
     },
     "partying-face": {
@@ -11802,7 +11801,7 @@
       "name": "Flag: Clipperton Island",
       "unicode": "🇨🇵",
       "shortcodes": [
-        "clipperton_island"
+        "flag_cp"
       ]
     },
     "man-vampire": {
@@ -11826,7 +11825,7 @@
       "name": "Flag: Togo",
       "unicode": "🇹🇬",
       "shortcodes": [
-        "togo"
+        "flag_tg"
       ]
     },
     "woman-with-veil-light-skin-tone": {
@@ -11890,7 +11889,7 @@
       "name": "Flag: St. Lucia",
       "unicode": "🇱🇨",
       "shortcodes": [
-        "st_lucia"
+        "flag_lc"
       ]
     },
     "man-police-officer-medium-dark-skin-tone": {
@@ -11994,7 +11993,7 @@
       "name": "Flag: Panama",
       "unicode": "🇵🇦",
       "shortcodes": [
-        "panama"
+        "flag_pa"
       ]
     },
     "flag-tonga": {
@@ -12002,7 +12001,7 @@
       "name": "Flag: Tonga",
       "unicode": "🇹🇴",
       "shortcodes": [
-        "tonga"
+        "flag_to"
       ]
     },
     "oncoming-fist-medium-light-skin-tone": {
@@ -12245,7 +12244,7 @@
       "name": "Flag: Bermuda",
       "unicode": "🇧🇲",
       "shortcodes": [
-        "bermuda"
+        "flag_bm"
       ]
     },
     "mouse-trap": {
@@ -12325,7 +12324,7 @@
       "name": "Flag: Antarctica",
       "unicode": "🇦🇶",
       "shortcodes": [
-        "antarctica"
+        "flag_aq"
       ]
     },
     "woman-running-light-skin-tone": {
@@ -12349,7 +12348,7 @@
       "name": "Flag: Sudan",
       "unicode": "🇸🇩",
       "shortcodes": [
-        "sudan"
+        "flag_sd"
       ]
     },
     "tanabata-tree": {
@@ -12485,7 +12484,7 @@
       "name": "Flag: Greenland",
       "unicode": "🇬🇱",
       "shortcodes": [
-        "greenland"
+        "flag_gl"
       ]
     },
     "flag-lesotho": {
@@ -12493,7 +12492,7 @@
       "name": "Flag: Lesotho",
       "unicode": "🇱🇸",
       "shortcodes": [
-        "lesotho"
+        "flag_ls"
       ]
     },
     "backhand-index-pointing-down-medium-light-skin-tone": {
@@ -12533,7 +12532,7 @@
       "name": "Flag: Palau",
       "unicode": "🇵🇼",
       "shortcodes": [
-        "palau"
+        "flag_pw"
       ]
     },
     "bowl-with-spoon": {
@@ -12565,7 +12564,7 @@
       "name": "Flag: Congo - Brazzaville",
       "unicode": "🇨🇬",
       "shortcodes": [
-        "congo_brazzaville"
+        "flag_cg"
       ]
     },
     "smirking-face": {
@@ -12701,7 +12700,7 @@
       "name": "Flag: Anguilla",
       "unicode": "🇦🇮",
       "shortcodes": [
-        "anguilla"
+        "flag_ai"
       ]
     },
     "mobile-phone": {
@@ -13101,7 +13100,7 @@
       "name": "Flag: Central African Republic",
       "unicode": "🇨🇫",
       "shortcodes": [
-        "central_african_republic"
+        "flag_cf"
       ]
     },
     "man-bald": {
@@ -13133,7 +13132,7 @@
       "name": "Flag: Curaçao",
       "unicode": "🇨🇼",
       "shortcodes": [
-        "curacao"
+        "flag_cw"
       ]
     },
     "pinching-hand-medium-light-skin-tone": {
@@ -13317,7 +13316,7 @@
       "name": "Flag: Botswana",
       "unicode": "🇧🇼",
       "shortcodes": [
-        "botswana"
+        "flag_bw"
       ]
     },
     "man-bouncing-ball-light-skin-tone": {
@@ -13493,7 +13492,7 @@
       "name": "Flag: Caribbean Netherlands",
       "unicode": "🇧🇶",
       "shortcodes": [
-        "caribbean_netherlands"
+        "flag_bq"
       ]
     },
     "man-pouting-medium-dark-skin-tone": {
@@ -13557,7 +13556,7 @@
       "name": "Flag: United Nations",
       "unicode": "🇺🇳",
       "shortcodes": [
-        "united_nations"
+        "flag_un"
       ]
     },
     "cook": {
@@ -13741,7 +13740,7 @@
       "name": "Flag: Japan",
       "unicode": "🇯🇵",
       "shortcodes": [
-        "jp"
+        "flag_jp"
       ]
     },
     "man-with-veil-medium-dark-skin-tone": {
@@ -13893,7 +13892,7 @@
       "name": "Flag: Canary Islands",
       "unicode": "🇮🇨",
       "shortcodes": [
-        "canary_islands"
+        "flag_ic"
       ]
     },
     "fork-and-knife": {
@@ -13909,7 +13908,7 @@
       "name": "Flag: Gambia",
       "unicode": "🇬🇲",
       "shortcodes": [
-        "gambia"
+        "flag_gm"
       ]
     },
     "person-light-skin-tone-red-hair": {
@@ -13989,7 +13988,7 @@
       "name": "Flag: Grenada",
       "unicode": "🇬🇩",
       "shortcodes": [
-        "grenada"
+        "flag_gd"
       ]
     },
     "woman-curly-hair": {
@@ -14013,7 +14012,7 @@
       "name": "Flag: Morocco",
       "unicode": "🇲🇦",
       "shortcodes": [
-        "morocco"
+        "flag_ma"
       ]
     },
     "man-elf-medium-skin-tone": {
@@ -14149,7 +14148,7 @@
       "name": "Flag: Cameroon",
       "unicode": "🇨🇲",
       "shortcodes": [
-        "cameroon"
+        "flag_cm"
       ]
     },
     "thumbs-up-medium-skin-tone": {
@@ -14213,7 +14212,7 @@
       "name": "Flag: Rwanda",
       "unicode": "🇷🇼",
       "shortcodes": [
-        "rwanda"
+        "flag_rw"
       ]
     },
     "woman-shrugging-medium-light-skin-tone": {
@@ -14293,7 +14292,7 @@
       "name": "Flag: Kosovo",
       "unicode": "🇽🇰",
       "shortcodes": [
-        "kosovo"
+        "flag_xk"
       ]
     },
     "man-playing-water-polo": {
@@ -14317,7 +14316,7 @@
       "name": "Flag: Slovenia",
       "unicode": "🇸🇮",
       "shortcodes": [
-        "slovenia"
+        "flag_si"
       ]
     },
     "pinching-hand-medium-dark-skin-tone": {
@@ -14671,7 +14670,7 @@
       "name": "Flag: Sweden",
       "unicode": "🇸🇪",
       "shortcodes": [
-        "sweden"
+        "flag_se"
       ]
     },
     "man-playing-water-polo-medium-skin-tone": {
@@ -14703,7 +14702,7 @@
       "name": "Flag: Czechia",
       "unicode": "🇨🇿",
       "shortcodes": [
-        "czech_republic"
+        "flag_cz"
       ]
     },
     "small-airplane": {
@@ -14735,7 +14734,7 @@
       "name": "Flag: Maldives",
       "unicode": "🇲🇻",
       "shortcodes": [
-        "maldives"
+        "flag_mv"
       ]
     },
     "woman-detective-medium-dark-skin-tone": {
@@ -14815,7 +14814,7 @@
       "name": "Flag: Lebanon",
       "unicode": "🇱🇧",
       "shortcodes": [
-        "lebanon"
+        "flag_lb"
       ]
     },
     "flag-hong-kong-sar-china": {
@@ -14823,7 +14822,7 @@
       "name": "Flag: Hong Kong SAR China",
       "unicode": "🇭🇰",
       "shortcodes": [
-        "hong_kong"
+        "flag_hk"
       ]
     },
     "woman-standing-dark-skin-tone": {
@@ -14999,7 +14998,7 @@
       "name": "Flag: Montserrat",
       "unicode": "🇲🇸",
       "shortcodes": [
-        "montserrat"
+        "flag_ms"
       ]
     },
     "flag-timor-leste": {
@@ -15007,7 +15006,7 @@
       "name": "Flag: Timor-Leste",
       "unicode": "🇹🇱",
       "shortcodes": [
-        "timor_leste"
+        "flag_tl"
       ]
     },
     "man-kneeling-medium-dark-skin-tone": {
@@ -15321,7 +15320,7 @@
       "name": "Flag: Jordan",
       "unicode": "🇯🇴",
       "shortcodes": [
-        "jordan"
+        "flag_jo"
       ]
     },
     "flag-sierra-leone": {
@@ -15329,7 +15328,7 @@
       "name": "Flag: Sierra Leone",
       "unicode": "🇸🇱",
       "shortcodes": [
-        "sierra_leone"
+        "flag_sl"
       ]
     },
     "person-playing-water-polo": {
@@ -15353,7 +15352,7 @@
       "name": "Flag: Nicaragua",
       "unicode": "🇳🇮",
       "shortcodes": [
-        "nicaragua"
+        "flag_ni"
       ]
     },
     "person-bowing-medium-dark-skin-tone": {
@@ -15377,7 +15376,7 @@
       "name": "Flag: Seychelles",
       "unicode": "🇸🇨",
       "shortcodes": [
-        "seychelles"
+        "flag_sc"
       ]
     },
     "orthodox-cross": {
@@ -15433,7 +15432,7 @@
       "name": "Flag: Saudi Arabia",
       "unicode": "🇸🇦",
       "shortcodes": [
-        "saudi_arabia"
+        "flag_sa"
       ]
     },
     "man-lifting-weights-dark-skin-tone": {
@@ -15625,7 +15624,7 @@
       "name": "Flag: Guadeloupe",
       "unicode": "🇬🇵",
       "shortcodes": [
-        "guadeloupe"
+        "flag_gp"
       ]
     },
     "mx-claus-dark-skin-tone": {
@@ -15746,7 +15745,7 @@
       "name": "Flag: Norway",
       "unicode": "🇳🇴",
       "shortcodes": [
-        "norway"
+        "flag_no"
       ]
     },
     "confounded-face": {
@@ -15931,15 +15930,7 @@
       "name": "Flag: Nigeria",
       "unicode": "🇳🇬",
       "shortcodes": [
-        "nigeria"
-      ]
-    },
-    "backhand-index-pointing-right-medium-light-skin-tone": {
-      "subpage": "backhand-index-pointing-right-medium-light-skin-tone",
-      "name": "Backhand Index Pointing Right: Medium-Light Skin Tone",
-      "unicode": "👉🏼",
-      "shortcodes": [
-        "backhand_index_pointing_right_medium_light_skin_tone"
+        "flag_ng"
       ]
     },
     "backhand-index-pointing-up-dark-skin-tone": {
@@ -15948,6 +15939,14 @@
       "unicode": "👆🏿",
       "shortcodes": [
         "backhand_index_pointing_up_dark_skin_tone"
+      ]
+    },
+    "backhand-index-pointing-right-medium-light-skin-tone": {
+      "subpage": "backhand-index-pointing-right-medium-light-skin-tone",
+      "name": "Backhand Index Pointing Right: Medium-Light Skin Tone",
+      "unicode": "👉🏼",
+      "shortcodes": [
+        "backhand_index_pointing_right_medium_light_skin_tone"
       ]
     },
     "raised-back-of-hand-medium-dark-skin-tone": {
@@ -16388,7 +16387,7 @@
       "name": "Flag: Bulgaria",
       "unicode": "🇧🇬",
       "shortcodes": [
-        "bulgaria"
+        "flag_bg"
       ]
     },
     "open-hands-medium-light-skin-tone": {
@@ -16548,7 +16547,7 @@
       "name": "Flag: Sri Lanka",
       "unicode": "🇱🇰",
       "shortcodes": [
-        "sri_lanka"
+        "flag_lk"
       ]
     },
     "kiss-woman-man-medium-light-skin-tone-dark-skin-tone": {
@@ -16620,7 +16619,7 @@
       "name": "Flag: Italy",
       "unicode": "🇮🇹",
       "shortcodes": [
-        "it"
+        "flag_it"
       ]
     },
     "person-kneeling-medium-light-skin-tone": {
@@ -16948,7 +16947,7 @@
       "name": "Flag: Barbados",
       "unicode": "🇧🇧",
       "shortcodes": [
-        "barbados"
+        "flag_bb"
       ]
     },
     "spiral-notepad": {
@@ -16964,7 +16963,7 @@
       "name": "Flag: Nauru",
       "unicode": "🇳🇷",
       "shortcodes": [
-        "nauru"
+        "flag_nr"
       ]
     },
     "ledger": {
@@ -17308,7 +17307,7 @@
       "name": "Flag: Qatar",
       "unicode": "🇶🇦",
       "shortcodes": [
-        "qatar"
+        "flag_qa"
       ]
     },
     "baby-medium-light-skin-tone": {
@@ -17692,7 +17691,7 @@
       "name": "Flag: Western Sahara",
       "unicode": "🇪🇭",
       "shortcodes": [
-        "western_sahara"
+        "flag_eh"
       ]
     },
     "elf-light-skin-tone": {
@@ -17716,7 +17715,7 @@
       "name": "Flag: Bosnia \u0026 Herzegovina",
       "unicode": "🇧🇦",
       "shortcodes": [
-        "bosnia_herzegovina"
+        "flag_ba"
       ]
     },
     "worried-face": {
@@ -17740,7 +17739,7 @@
       "name": "Flag: Laos",
       "unicode": "🇱🇦",
       "shortcodes": [
-        "laos"
+        "flag_la"
       ]
     },
     "pause-button": {
@@ -17764,7 +17763,7 @@
       "name": "Flag: Liberia",
       "unicode": "🇱🇷",
       "shortcodes": [
-        "liberia"
+        "flag_lr"
       ]
     },
     "backhand-index-pointing-up-light-skin-tone": {
@@ -17884,7 +17883,7 @@
       "name": "Flag: Angola",
       "unicode": "🇦🇴",
       "shortcodes": [
-        "angola"
+        "flag_ao"
       ]
     },
     "hundred-points": {
@@ -18141,7 +18140,7 @@
       "name": "Flag: Bhutan",
       "unicode": "🇧🇹",
       "shortcodes": [
-        "bhutan"
+        "flag_bt"
       ]
     },
     "cook-medium-dark-skin-tone": {
@@ -18265,14 +18264,6 @@
         "woman_shrugging_dark_skin_tone"
       ]
     },
-    "person-golfing-medium-light-skin-tone": {
-      "subpage": "person-golfing-medium-light-skin-tone",
-      "name": "Person Golfing: Medium-Light Skin Tone",
-      "unicode": "🏌🏼",
-      "shortcodes": [
-        "person_golfing_medium_light_skin_tone"
-      ]
-    },
     "man-golfing-light-skin-tone": {
       "subpage": "man-golfing-light-skin-tone",
       "name": "Man Golfing: Light Skin Tone",
@@ -18281,12 +18272,20 @@
         "man_golfing_light_skin_tone"
       ]
     },
+    "person-golfing-medium-light-skin-tone": {
+      "subpage": "person-golfing-medium-light-skin-tone",
+      "name": "Person Golfing: Medium-Light Skin Tone",
+      "unicode": "🏌🏼",
+      "shortcodes": [
+        "person_golfing_medium_light_skin_tone"
+      ]
+    },
     "flag-slovakia": {
       "subpage": "flag-slovakia",
       "name": "Flag: Slovakia",
       "unicode": "🇸🇰",
       "shortcodes": [
-        "slovakia"
+        "flag_sk"
       ]
     },
     "people-holding-hands-medium-skin-tone-dark-skin-tone": {
@@ -18390,7 +18389,7 @@
       "name": "Flag: Belarus",
       "unicode": "🇧🇾",
       "shortcodes": [
-        "belarus"
+        "flag_by"
       ]
     },
     "mx-claus-medium-light-skin-tone": {
@@ -18462,7 +18461,7 @@
       "name": "Flag: Germany",
       "unicode": "🇩🇪",
       "shortcodes": [
-        "de"
+        "flag_de"
       ]
     },
     "magic-wand": {
@@ -18518,7 +18517,7 @@
       "name": "Flag: Mayotte",
       "unicode": "🇾🇹",
       "shortcodes": [
-        "mayotte"
+        "flag_yt"
       ]
     },
     "hut": {
@@ -18751,7 +18750,7 @@
       "name": "Flag: South Africa",
       "unicode": "🇿🇦",
       "shortcodes": [
-        "south_africa"
+        "flag_za"
       ]
     },
     "factory-worker": {
@@ -18815,7 +18814,7 @@
       "name": "Flag: Myanmar (Burma)",
       "unicode": "🇲🇲",
       "shortcodes": [
-        "myanmar"
+        "flag_mm"
       ]
     },
     "woman-mechanic-medium-dark-skin-tone": {
@@ -18847,7 +18846,7 @@
       "name": "Flag: Northern Mariana Islands",
       "unicode": "🇲🇵",
       "shortcodes": [
-        "northern_mariana_islands"
+        "flag_mp"
       ]
     },
     "pinched-fingers": {
@@ -18863,7 +18862,7 @@
       "name": "Flag: Kyrgyzstan",
       "unicode": "🇰🇬",
       "shortcodes": [
-        "kyrgyzstan"
+        "flag_kg"
       ]
     },
     "american-football": {
@@ -19008,7 +19007,7 @@
       "name": "Flag: Liechtenstein",
       "unicode": "🇱🇮",
       "shortcodes": [
-        "liechtenstein"
+        "flag_li"
       ]
     },
     "man-getting-haircut-medium-light-skin-tone": {
@@ -19251,7 +19250,7 @@
       "name": "Flag: Tajikistan",
       "unicode": "🇹🇯",
       "shortcodes": [
-        "tajikistan"
+        "flag_tj"
       ]
     },
     "gorilla": {
@@ -19564,7 +19563,7 @@
       "name": "Flag: Kuwait",
       "unicode": "🇰🇼",
       "shortcodes": [
-        "kuwait"
+        "flag_kw"
       ]
     },
     "woman-tipping-hand": {
@@ -19709,7 +19708,7 @@
       "name": "Flag: Faroe Islands",
       "unicode": "🇫🇴",
       "shortcodes": [
-        "faroe_islands"
+        "flag_fo"
       ]
     },
     "person-climbing-medium-skin-tone": {
@@ -19757,7 +19756,7 @@
       "name": "Flag: Kazakhstan",
       "unicode": "🇰🇿",
       "shortcodes": [
-        "kazakhstan"
+        "flag_kz"
       ]
     },
     "flag-sao-tome-principe": {
@@ -19765,7 +19764,7 @@
       "name": "Flag: São Tomé \u0026 Príncipe",
       "unicode": "🇸🇹",
       "shortcodes": [
-        "sao_tome_principe"
+        "flag_st"
       ]
     },
     "flag-north-macedonia": {
@@ -19773,7 +19772,7 @@
       "name": "Flag: North Macedonia",
       "unicode": "🇲🇰",
       "shortcodes": [
-        "macedonia"
+        "flag_mk"
       ]
     },
     "fish": {
@@ -19925,7 +19924,7 @@
       "name": "Flag: New Zealand",
       "unicode": "🇳🇿",
       "shortcodes": [
-        "new_zealand"
+        "flag_nz"
       ]
     },
     "person-tipping-hand-light-skin-tone": {
@@ -19957,7 +19956,7 @@
       "name": "Flag: Haiti",
       "unicode": "🇭🇹",
       "shortcodes": [
-        "haiti"
+        "flag_ht"
       ]
     },
     "couple-with-heart-woman-woman-light-skin-tone-medium-skin-tone": {
@@ -20085,7 +20084,7 @@
       "name": "Flag: French Polynesia",
       "unicode": "🇵🇫",
       "shortcodes": [
-        "french_polynesia"
+        "flag_pf"
       ]
     },
     "face-with-monocle": {
@@ -20141,7 +20140,7 @@
       "name": "Flag: Canada",
       "unicode": "🇨🇦",
       "shortcodes": [
-        "canada"
+        "flag_ca"
       ]
     },
     "bento-box": {
@@ -20205,7 +20204,7 @@
       "name": "Flag: New Caledonia",
       "unicode": "🇳🇨",
       "shortcodes": [
-        "new_caledonia"
+        "flag_nc"
       ]
     },
     "woman-cartwheeling-medium-light-skin-tone": {
@@ -20549,7 +20548,7 @@
       "name": "Flag: Vanuatu",
       "unicode": "🇻🇺",
       "shortcodes": [
-        "vanuatu"
+        "flag_vu"
       ]
     },
     "person-raising-hand-medium-dark-skin-tone": {
@@ -20669,7 +20668,7 @@
       "name": "Flag: Bahrain",
       "unicode": "🇧🇭",
       "shortcodes": [
-        "bahrain"
+        "flag_bh"
       ]
     },
     "woman-superhero-dark-skin-tone": {
@@ -20814,7 +20813,7 @@
       "name": "Flag: Malawi",
       "unicode": "🇲🇼",
       "shortcodes": [
-        "malawi"
+        "flag_mw"
       ]
     },
     "squid": {
@@ -20830,7 +20829,7 @@
       "name": "Flag: Greece",
       "unicode": "🇬🇷",
       "shortcodes": [
-        "greece"
+        "flag_gr"
       ]
     },
     "nut-and-bolt": {
@@ -20990,7 +20989,7 @@
       "name": "Flag: Monaco",
       "unicode": "🇲🇨",
       "shortcodes": [
-        "monaco"
+        "flag_mc"
       ]
     },
     "oncoming-fist-dark-skin-tone": {
@@ -21030,7 +21029,7 @@
       "name": "Flag: Paraguay",
       "unicode": "🇵🇾",
       "shortcodes": [
-        "paraguay"
+        "flag_py"
       ]
     },
     "last-quarter-moon-face": {
@@ -21174,7 +21173,7 @@
       "name": "Flag: Croatia",
       "unicode": "🇭🇷",
       "shortcodes": [
-        "croatia"
+        "flag_hr"
       ]
     },
     "person-in-suit-levitating-medium-skin-tone": {
@@ -21374,7 +21373,7 @@
       "name": "Flag: Ukraine",
       "unicode": "🇺🇦",
       "shortcodes": [
-        "ukraine"
+        "flag_ua"
       ]
     },
     "pig-face": {
@@ -21639,7 +21638,7 @@
       "name": "Flag: Guam",
       "unicode": "🇬🇺",
       "shortcodes": [
-        "guam"
+        "flag_gu"
       ]
     },
     "free-button": {
@@ -21879,7 +21878,7 @@
       "name": "Flag: Fiji",
       "unicode": "🇫🇯",
       "shortcodes": [
-        "fiji"
+        "flag_fj"
       ]
     },
     "man-gesturing-ok-medium-dark-skin-tone": {
@@ -21983,7 +21982,7 @@
       "name": "Flag: Turkmenistan",
       "unicode": "🇹🇲",
       "shortcodes": [
-        "turkmenistan"
+        "flag_tm"
       ]
     },
     "woman-office-worker-light-skin-tone": {
@@ -22096,7 +22095,7 @@
       "name": "Flag: Brazil",
       "unicode": "🇧🇷",
       "shortcodes": [
-        "brazil"
+        "flag_br"
       ]
     },
     "couple-with-heart-woman-woman-medium-light-skin-tone-medium-skin-tone": {
@@ -22160,7 +22159,7 @@
       "name": "Flag: Marshall Islands",
       "unicode": "🇲🇭",
       "shortcodes": [
-        "marshall_islands"
+        "flag_mh"
       ]
     },
     "japanese-application-button": {
@@ -22192,7 +22191,7 @@
       "name": "Flag: Lithuania",
       "unicode": "🇱🇹",
       "shortcodes": [
-        "lithuania"
+        "flag_lt"
       ]
     },
     "deaf-man-medium-dark-skin-tone": {
@@ -22232,7 +22231,7 @@
       "name": "Flag: Armenia",
       "unicode": "🇦🇲",
       "shortcodes": [
-        "armenia"
+        "flag_am"
       ]
     },
     "woman-standing-medium-skin-tone": {
@@ -22248,7 +22247,7 @@
       "name": "Flag: Austria",
       "unicode": "🇦🇹",
       "shortcodes": [
-        "austria"
+        "flag_at"
       ]
     },
     "woman-bouncing-ball-medium-skin-tone": {
@@ -22472,7 +22471,7 @@
       "name": "Flag: Tristan Da Cunha",
       "unicode": "🇹🇦",
       "shortcodes": [
-        "tristan_da_cunha"
+        "flag_ta"
       ]
     },
     "anatomical-heart": {
@@ -22672,7 +22671,7 @@
       "name": "Flag: Mexico",
       "unicode": "🇲🇽",
       "shortcodes": [
-        "mexico"
+        "flag_mx"
       ]
     },
     "face-savoring-food": {
@@ -22728,7 +22727,7 @@
       "name": "Flag: Costa Rica",
       "unicode": "🇨🇷",
       "shortcodes": [
-        "costa_rica"
+        "flag_cr"
       ]
     },
     "blossom": {
@@ -22760,7 +22759,7 @@
       "name": "Flag: Luxembourg",
       "unicode": "🇱🇺",
       "shortcodes": [
-        "luxembourg"
+        "flag_lu"
       ]
     },
     "ladder": {
@@ -22969,7 +22968,7 @@
       "name": "Flag: Samoa",
       "unicode": "🇼🇸",
       "shortcodes": [
-        "samoa"
+        "flag_ws"
       ]
     },
     "elf-medium-skin-tone": {
@@ -23082,7 +23081,7 @@
       "name": "Flag: Côte d’Ivoire",
       "unicode": "🇨🇮",
       "shortcodes": [
-        "cote_divoire"
+        "flag_ci"
       ]
     },
     "writing-hand-medium-skin-tone": {
@@ -23106,7 +23105,7 @@
       "name": "Flag: Netherlands",
       "unicode": "🇳🇱",
       "shortcodes": [
-        "netherlands"
+        "flag_nl"
       ]
     },
     "automobile": {
@@ -23235,7 +23234,7 @@
       "name": "Flag: Scotland",
       "unicode": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
       "shortcodes": [
-        "scotland"
+        "flag_scotland"
       ]
     },
     "clapping-hands-light-skin-tone": {
@@ -23463,6 +23462,14 @@
         "tada"
       ]
     },
+    "left-arrow": {
+      "subpage": "left-arrow",
+      "name": "Left Arrow",
+      "unicode": "⬅️",
+      "shortcodes": [
+        "arrow_left"
+      ]
+    },
     "woman-artist-medium-light-skin-tone": {
       "subpage": "woman-artist-medium-light-skin-tone",
       "name": "Woman Artist: Medium-Light Skin Tone",
@@ -23508,7 +23515,7 @@
       "name": "Flag: Madagascar",
       "unicode": "🇲🇬",
       "shortcodes": [
-        "madagascar"
+        "flag_mg"
       ]
     },
     "telephone": {
@@ -23685,7 +23692,7 @@
       "name": "Flag: Chad",
       "unicode": "🇹🇩",
       "shortcodes": [
-        "chad"
+        "flag_td"
       ]
     },
     "man-scientist-medium-skin-tone": {
@@ -23877,7 +23884,7 @@
       "name": "Flag: Heard \u0026 McDonald Islands",
       "unicode": "🇭🇲",
       "shortcodes": [
-        "heard_mcdonald_islands"
+        "flag_hm"
       ]
     },
     "man-getting-massage-dark-skin-tone": {
@@ -23893,7 +23900,7 @@
       "name": "Flag: Malaysia",
       "unicode": "🇲🇾",
       "shortcodes": [
-        "malaysia"
+        "flag_my"
       ]
     },
     "woman-health-worker-medium-light-skin-tone": {
@@ -23925,7 +23932,7 @@
       "name": "Flag: Iraq",
       "unicode": "🇮🇶",
       "shortcodes": [
-        "iraq"
+        "flag_iq"
       ]
     },
     "man-scientist-medium-dark-skin-tone": {
@@ -23941,7 +23948,7 @@
       "name": "Flag: Iran",
       "unicode": "🇮🇷",
       "shortcodes": [
-        "iran"
+        "flag_ir"
       ]
     },
     "flag-cayman-islands": {
@@ -23949,7 +23956,7 @@
       "name": "Flag: Cayman Islands",
       "unicode": "🇰🇾",
       "shortcodes": [
-        "cayman_islands"
+        "flag_ky"
       ]
     },
     "man-in-manual-wheelchair-dark-skin-tone": {
@@ -23981,7 +23988,7 @@
       "name": "Flag: Zambia",
       "unicode": "🇿🇲",
       "shortcodes": [
-        "zambia"
+        "flag_zm"
       ]
     },
     "guard": {
@@ -23997,7 +24004,7 @@
       "name": "Flag: Peru",
       "unicode": "🇵🇪",
       "shortcodes": [
-        "peru"
+        "flag_pe"
       ]
     },
     "lollipop": {
@@ -24093,7 +24100,7 @@
       "name": "Flag: Namibia",
       "unicode": "🇳🇦",
       "shortcodes": [
-        "namibia"
+        "flag_na"
       ]
     },
     "flag-cook-islands": {
@@ -24101,7 +24108,7 @@
       "name": "Flag: Cook Islands",
       "unicode": "🇨🇰",
       "shortcodes": [
-        "cook_islands"
+        "flag_ck"
       ]
     },
     "woman-zombie": {
@@ -24181,7 +24188,7 @@
       "name": "Flag: Andorra",
       "unicode": "🇦🇩",
       "shortcodes": [
-        "andorra"
+        "flag_ad"
       ]
     },
     "firefighter-medium-light-skin-tone": {
@@ -24245,7 +24252,7 @@
       "name": "Flag: Réunion",
       "unicode": "🇷🇪",
       "shortcodes": [
-        "reunion"
+        "flag_re"
       ]
     },
     "man-tipping-hand-dark-skin-tone": {
@@ -24430,7 +24437,7 @@
       "name": "Flag: Trinidad \u0026 Tobago",
       "unicode": "🇹🇹",
       "shortcodes": [
-        "trinidad_tobago"
+        "flag_tt"
       ]
     },
     "man-gesturing-ok-dark-skin-tone": {
@@ -24630,7 +24637,7 @@
       "name": "Flag: Somalia",
       "unicode": "🇸🇴",
       "shortcodes": [
-        "somalia"
+        "flag_so"
       ]
     },
     "old-woman-medium-dark-skin-tone": {
@@ -24654,7 +24661,7 @@
       "name": "Flag: Guernsey",
       "unicode": "🇬🇬",
       "shortcodes": [
-        "guernsey"
+        "flag_gg"
       ]
     },
     "deaf-woman": {
@@ -24814,7 +24821,7 @@
       "name": "Flag: Ascension Island",
       "unicode": "🇦🇨",
       "shortcodes": [
-        "ascension_island"
+        "flag_ac"
       ]
     },
     "flag-benin": {
@@ -24822,7 +24829,7 @@
       "name": "Flag: Benin",
       "unicode": "🇧🇯",
       "shortcodes": [
-        "benin"
+        "flag_bj"
       ]
     },
     "sponge": {
@@ -24902,7 +24909,7 @@
       "name": "Flag: St. Kitts \u0026 Nevis",
       "unicode": "🇰🇳",
       "shortcodes": [
-        "st_kitts_nevis"
+        "flag_kn"
       ]
     },
     "woman-medium-dark-skin-tone": {
@@ -24934,7 +24941,7 @@
       "name": "Flag: U.S. Virgin Islands",
       "unicode": "🇻🇮",
       "shortcodes": [
-        "us_virgin_islands"
+        "flag_vi"
       ]
     },
     "princess-medium-light-skin-tone": {
@@ -24982,7 +24989,7 @@
       "name": "Flag: Belgium",
       "unicode": "🇧🇪",
       "shortcodes": [
-        "belgium"
+        "flag_be"
       ]
     },
     "flag-equatorial-guinea": {
@@ -24990,7 +24997,7 @@
       "name": "Flag: Equatorial Guinea",
       "unicode": "🇬🇶",
       "shortcodes": [
-        "equatorial_guinea"
+        "flag_gq"
       ]
     },
     "twelve-thirty": {
@@ -25134,7 +25141,7 @@
       "name": "Flag: Kiribati",
       "unicode": "🇰🇮",
       "shortcodes": [
-        "kiribati"
+        "flag_ki"
       ]
     },
     "man-artist-dark-skin-tone": {
@@ -25198,7 +25205,7 @@
       "name": "Flag: Turks \u0026 Caicos Islands",
       "unicode": "🇹🇨",
       "shortcodes": [
-        "turks_caicos_islands"
+        "flag_tc"
       ]
     },
     "cook-dark-skin-tone": {
@@ -25238,7 +25245,7 @@
       "name": "Flag: Niue",
       "unicode": "🇳🇺",
       "shortcodes": [
-        "niue"
+        "flag_nu"
       ]
     },
     "artist-medium-light-skin-tone": {
@@ -25358,8 +25365,7 @@
       "name": "Flag: European Union",
       "unicode": "🇪🇺",
       "shortcodes": [
-        "eu",
-        "european_union"
+        "flag_eu"
       ]
     },
     "raised-fist-light-skin-tone": {
@@ -25383,7 +25389,7 @@
       "name": "Flag: Taiwan",
       "unicode": "🇹🇼",
       "shortcodes": [
-        "taiwan"
+        "flag_tw"
       ]
     },
     "superhero-medium-dark-skin-tone": {
@@ -25536,7 +25542,7 @@
       "name": "Flag: France",
       "unicode": "🇫🇷",
       "shortcodes": [
-        "fr"
+        "flag_fr"
       ]
     },
     "family-woman-girl": {
@@ -25568,7 +25574,7 @@
       "name": "Flag: St. Barthélemy",
       "unicode": "🇧🇱",
       "shortcodes": [
-        "st_barthelemy"
+        "flag_bl"
       ]
     },
     "pot-of-food": {
@@ -25664,7 +25670,7 @@
       "name": "Flag: Jersey",
       "unicode": "🇯🇪",
       "shortcodes": [
-        "jersey"
+        "flag_je"
       ]
     },
     "men-holding-hands-dark-skin-tone-light-skin-tone": {
@@ -25704,7 +25710,7 @@
       "name": "Flag: South Korea",
       "unicode": "🇰🇷",
       "shortcodes": [
-        "kr"
+        "flag_kr"
       ]
     },
     "kiss-man-man-dark-skin-tone-light-skin-tone": {
@@ -25984,7 +25990,7 @@
       "name": "Flag: Guinea",
       "unicode": "🇬🇳",
       "shortcodes": [
-        "guinea"
+        "flag_gn"
       ]
     },
     "heart-exclamation": {
@@ -26088,7 +26094,7 @@
       "name": "Flag: Montenegro",
       "unicode": "🇲🇪",
       "shortcodes": [
-        "montenegro"
+        "flag_me"
       ]
     },
     "eight-pointed-star": {
@@ -26128,7 +26134,7 @@
       "name": "Flag: Portugal",
       "unicode": "🇵🇹",
       "shortcodes": [
-        "portugal"
+        "flag_pt"
       ]
     },
     "dollar-banknote": {
@@ -26163,20 +26169,20 @@
         "guardswoman"
       ]
     },
-    "flag-cambodia": {
-      "subpage": "flag-cambodia",
-      "name": "Flag: Cambodia",
-      "unicode": "🇰🇭",
-      "shortcodes": [
-        "cambodia"
-      ]
-    },
     "flag-isle-of-man": {
       "subpage": "flag-isle-of-man",
       "name": "Flag: Isle of Man",
       "unicode": "🇮🇲",
       "shortcodes": [
-        "isle_of_man"
+        "flag_im"
+      ]
+    },
+    "flag-cambodia": {
+      "subpage": "flag-cambodia",
+      "name": "Flag: Cambodia",
+      "unicode": "🇰🇭",
+      "shortcodes": [
+        "flag_kh"
       ]
     },
     "mammoth": {
@@ -26256,7 +26262,7 @@
       "name": "Flag: Iceland",
       "unicode": "🇮🇸",
       "shortcodes": [
-        "iceland"
+        "flag_is"
       ]
     },
     "flexed-biceps-medium-light-skin-tone": {
@@ -26440,7 +26446,7 @@
       "name": "Flag: Mongolia",
       "unicode": "🇲🇳",
       "shortcodes": [
-        "mongolia"
+        "flag_mn"
       ]
     },
     "woman-scientist-medium-light-skin-tone": {
@@ -26520,7 +26526,7 @@
       "name": "Flag: Ghana",
       "unicode": "🇬🇭",
       "shortcodes": [
-        "ghana"
+        "flag_gh"
       ]
     },
     "family-man-man-girl-girl": {
@@ -26560,7 +26566,7 @@
       "name": "Flag: Azerbaijan",
       "unicode": "🇦🇿",
       "shortcodes": [
-        "azerbaijan"
+        "flag_az"
       ]
     },
     "person-in-motorized-wheelchair-medium-skin-tone": {
@@ -26672,7 +26678,7 @@
       "name": "Flag: China",
       "unicode": "🇨🇳",
       "shortcodes": [
-        "cn"
+        "flag_cn"
       ]
     },
     "plunger": {
@@ -26696,7 +26702,7 @@
       "name": "Flag: Spain",
       "unicode": "🇪🇸",
       "shortcodes": [
-        "es"
+        "flag_es"
       ]
     },
     "id-button": {
@@ -26824,7 +26830,7 @@
       "name": "Flag: Ecuador",
       "unicode": "🇪🇨",
       "shortcodes": [
-        "ecuador"
+        "flag_ec"
       ]
     },
     "person-with-white-cane-light-skin-tone": {
@@ -26840,7 +26846,7 @@
       "name": "Flag: St. Helena",
       "unicode": "🇸🇭",
       "shortcodes": [
-        "st_helena"
+        "flag_sh"
       ]
     },
     "woman-medium-skin-tone-blond-hair": {
@@ -26992,7 +26998,7 @@
       "name": "Flag: Cocos (Keeling) Islands",
       "unicode": "🇨🇨",
       "shortcodes": [
-        "cocos_islands"
+        "flag_cc"
       ]
     },
     "woman-dark-skin-tone-bald": {
@@ -27024,7 +27030,7 @@
       "name": "Flag: Macao Sar China",
       "unicode": "🇲🇴",
       "shortcodes": [
-        "macau"
+        "flag_mo"
       ]
     },
     "person-dark-skin-tone-white-hair": {
@@ -27075,20 +27081,20 @@
         "person_medium_dark_skin_tone"
       ]
     },
-    "person-walking-medium-dark-skin-tone": {
-      "subpage": "person-walking-medium-dark-skin-tone",
-      "name": "Person Walking: Medium-Dark Skin Tone",
-      "unicode": "🚶🏾",
-      "shortcodes": [
-        "person_walking_medium_dark_skin_tone"
-      ]
-    },
     "man-walking-dark-skin-tone": {
       "subpage": "man-walking-dark-skin-tone",
       "name": "Man Walking: Dark Skin Tone",
       "unicode": "🚶🏿‍♂️",
       "shortcodes": [
         "man_walking_dark_skin_tone"
+      ]
+    },
+    "person-walking-medium-dark-skin-tone": {
+      "subpage": "person-walking-medium-dark-skin-tone",
+      "name": "Person Walking: Medium-Dark Skin Tone",
+      "unicode": "🚶🏾",
+      "shortcodes": [
+        "person_walking_medium_dark_skin_tone"
       ]
     },
     "person-lifting-weights-medium-light-skin-tone": {
@@ -27280,7 +27286,7 @@
       "name": "Flag: Falkland Islands",
       "unicode": "🇫🇰",
       "shortcodes": [
-        "falkland_islands"
+        "flag_fk"
       ]
     },
     "flag-st-pierre-miquelon": {
@@ -27288,7 +27294,7 @@
       "name": "Flag: St. Pierre \u0026 Miquelon",
       "unicode": "🇵🇲",
       "shortcodes": [
-        "st_pierre_miquelon"
+        "flag_pm"
       ]
     },
     "flag-chile": {
@@ -27296,7 +27302,7 @@
       "name": "Flag: Chile",
       "unicode": "🇨🇱",
       "shortcodes": [
-        "chile"
+        "flag_cl"
       ]
     },
     "deciduous-tree": {
@@ -27320,7 +27326,7 @@
       "name": "Flag: Burundi",
       "unicode": "🇧🇮",
       "shortcodes": [
-        "burundi"
+        "flag_bi"
       ]
     },
     "rice-cracker": {
@@ -27536,7 +27542,7 @@
       "name": "Flag: Finland",
       "unicode": "🇫🇮",
       "shortcodes": [
-        "finland"
+        "flag_fi"
       ]
     },
     "man-guard-medium-skin-tone": {
@@ -27640,7 +27646,7 @@
       "name": "Flag: Bouvet Island",
       "unicode": "🇧🇻",
       "shortcodes": [
-        "bouvet_island"
+        "flag_bv"
       ]
     },
     "couple-with-heart-woman-man-dark-skin-tone-medium-skin-tone": {
@@ -27656,7 +27662,7 @@
       "name": "Flag: American Samoa",
       "unicode": "🇦🇸",
       "shortcodes": [
-        "american_samoa"
+        "flag_as"
       ]
     },
     "adhesive-bandage": {
@@ -27728,7 +27734,7 @@
       "name": "Flag: Vietnam",
       "unicode": "🇻🇳",
       "shortcodes": [
-        "vietnam"
+        "flag_vn"
       ]
     },
     "flag-mauritania": {
@@ -27736,7 +27742,7 @@
       "name": "Flag: Mauritania",
       "unicode": "🇲🇷",
       "shortcodes": [
-        "mauritania"
+        "flag_mr"
       ]
     },
     "motorized-wheelchair": {
@@ -27760,7 +27766,7 @@
       "name": "Flag: Puerto Rico",
       "unicode": "🇵🇷",
       "shortcodes": [
-        "puerto_rico"
+        "flag_pr"
       ]
     },
     "old-man-dark-skin-tone": {
@@ -27970,7 +27976,7 @@
       "name": "Flag: Djibouti",
       "unicode": "🇩🇯",
       "shortcodes": [
-        "djibouti"
+        "flag_dj"
       ]
     },
     "woman-farmer-medium-light-skin-tone": {
@@ -28010,7 +28016,7 @@
       "name": "Flag: Ceuta \u0026 Melilla",
       "unicode": "🇪🇦",
       "shortcodes": [
-        "ceuta_melilla"
+        "flag_ea"
       ]
     },
     "woman-pilot-medium-dark-skin-tone": {
@@ -28122,7 +28128,7 @@
       "name": "Flag: Norfolk Island",
       "unicode": "🇳🇫",
       "shortcodes": [
-        "norfolk_island"
+        "flag_nf"
       ]
     },
     "person-raising-hand-dark-skin-tone": {
@@ -28170,15 +28176,7 @@
       "name": "Flag: Nepal",
       "unicode": "🇳🇵",
       "shortcodes": [
-        "nepal"
-      ]
-    },
-    "left-arrow": {
-      "subpage": "left-arrow",
-      "name": "Left Arrow",
-      "unicode": "⬅️",
-      "shortcodes": [
-        "arrow_left"
+        "flag_np"
       ]
     }
   }
