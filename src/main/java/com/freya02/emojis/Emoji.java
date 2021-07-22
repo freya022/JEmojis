@@ -1,5 +1,6 @@
 package com.freya02.emojis;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -29,6 +30,21 @@ public final class Emoji {
 	public String unicode() { return unicode; }
 
 	public List<String> shortcodes() { return shortcodes; }
+
+	public List<String> getUTF16() {
+		int[] codepoints = unicode.codePoints().toArray();
+
+		List<String> list = new ArrayList<>();
+		for (int codePoint : codepoints) {
+			final char[] chars = Character.toChars(codePoint);
+			for (char aChar : chars) {
+				final String hex = Integer.toHexString(aChar).toUpperCase();
+				list.add("\\u" + "0".repeat(4 - hex.length()) + hex);
+			}
+		}
+
+		return list;
+	}
 
 	@Override
 	public boolean equals(Object o) {
