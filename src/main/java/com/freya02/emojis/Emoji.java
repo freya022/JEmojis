@@ -39,6 +39,8 @@ public final class Emoji {
 			final char[] chars = Character.toChars(codePoint);
 			for (char aChar : chars) {
 				final String hex = Integer.toHexString(aChar).toUpperCase();
+				if (hex.equals("FE0F")) continue; //Skip invisible codepoint which specifies that the preceding character should be displayed with emoji presentation
+
 				list.add("\\u" + "0".repeat(4 - hex.length()) + hex);
 			}
 		}
