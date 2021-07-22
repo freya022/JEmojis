@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+import static com.freya02.emojis.TwemojiType.X72;
+
 public final class Emoji {
 	private final String subpage;
 	private final String name;
@@ -53,6 +55,19 @@ public final class Emoji {
 		return unicode.codePoints()
 				.mapToObj(codepoint -> "U+" + Integer.toHexString(codepoint).toUpperCase())
 				.collect(Collectors.toList());
+	}
+
+	public List<String> getHexCodepoints() {
+		return unicode.codePoints()
+				.mapToObj(Integer::toHexString)
+				.collect(Collectors.toList());
+	}
+
+	public String getTwemojiImageUrl(TwemojiType type) {
+		final String folder = type == X72 ? "72x72" : "svg";
+		final String extension = type == X72 ? ".png" : ".svg";
+
+		return "https://raw.githubusercontent.com/twitter/twemoji/master/assets/" + folder + "/" + String.join("-", getHexCodepoints()) + extension;
 	}
 
 	@Override
