@@ -70,6 +70,14 @@ public final class Emoji {
 		return "https://raw.githubusercontent.com/twitter/twemoji/master/assets/" + folder + "/" + String.join("-", getHexCodepoints()) + extension;
 	}
 
+	public EmojiRenderer newRenderer() {
+		try {
+			return new EmojiRenderer().setEmoji(this);
+		} catch (Exception e) {
+			throw new RuntimeException("An exception occurred while making an EmojiRender, do you have JavaFX installed ?", e);
+		}
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;

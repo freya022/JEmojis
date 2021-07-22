@@ -100,5 +100,23 @@
             <artifactId>annotations</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>15.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>15.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.freya02</groupId>
+            <artifactId>Library6</artifactId>
+            <version>1.3.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 </project>
