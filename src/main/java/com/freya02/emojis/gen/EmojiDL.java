@@ -57,13 +57,7 @@ class EmojiDL {
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		final EmojiDL emojiDL = new EmojiDL("twemoji-13.1");
-
-		long start = System.nanoTime();
-		emojiDL.start();
-		long end = System.nanoTime();
-
-		System.out.println("Took " + (end - start) / 1000000.0 + " ms");
+		new EmojiDL("twemoji-13.1").start();
 	}
 
 	private void start() throws IOException, InterruptedException {
