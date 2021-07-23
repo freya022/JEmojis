@@ -122,6 +122,8 @@ class EmojiDL {
 							if (shortcode.contains("-") && !shortcode.equals("-1")) {
 								LOGGER.debug("Replacing - by _ in {}", shortcode);
 								shortcodes.add(shortcode.replace('-', '_'));
+
+								continue;
 							}
 
 							shortcodes.add(shortcode);

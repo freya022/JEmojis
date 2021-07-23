@@ -15095,8 +15095,7 @@
       "name": "E-Mail",
       "unicode": "📧",
       "shortcodes": [
-        "e_mail",
-        "e-mail"
+        "e_mail"
       ]
     },
     "person-juggling-medium-light-skin-tone": {
@@ -19063,7 +19062,6 @@
       "name": "T-Rex",
       "unicode": "🦖",
       "shortcodes": [
-        "t-rex",
         "t_rex"
       ]
     },
@@ -22887,7 +22885,6 @@
       "name": "Non-Potable Water",
       "unicode": "🚱",
       "shortcodes": [
-        "non-potable_water",
         "non_potable_water"
       ]
     },
