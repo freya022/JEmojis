@@ -3,6 +3,7 @@ package com.freya02.emojis;
 import org.slf4j.Logger;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,10 @@ public class Emojis {
 		} catch (IOException e) {
 			throw new RuntimeException("Unable to load emojis", e);
 		}
+	}
+
+	public static Map<String, Emoji> getEmojis() {
+		return Collections.unmodifiableMap(store.getEmojiMap());
 	}
 
 	public static Emoji ofUnicode(String unicode) {
