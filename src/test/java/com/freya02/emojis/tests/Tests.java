@@ -1,3 +1,5 @@
+package com.freya02.emojis.tests;
+
 import com.freya02.emojis.Emoji;
 import com.freya02.emojis.EmojiParser;
 import com.freya02.emojis.Emojis;
@@ -53,7 +55,7 @@ public class Tests {
 
 	@Test
 	public void checkShortcodesTest() {
-		for (Emoji emoji : Emojis.getEmojis().values()) {
+		for (Emoji emoji : Emojis.getEmojis()) {
 			for (String shortcode : emoji.shortcodes()) {
 				final Matcher matcher = shortcodePattern.matcher(':' + shortcode + ':');
 
