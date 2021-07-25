@@ -103,13 +103,13 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>15.0.1</version>
+            <version>18-ea+1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
-            <version>15.0.1</version>
+            <version>18-ea+1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
