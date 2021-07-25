@@ -114,7 +114,7 @@ class EmojiDL {
 							//Trying to adhere more to discord shortcode naming scheme,
 							// comparing example such as "cow" and "cow head" reveals that it uses either Slack or Github shortcodes,
 							// But i'd go with Github as https://emojipedia.org/star-struck/ shows github using underscores instead of dashes (like Slack)
-							if (!social.contains("Github")) {
+							if (!social.contains("Slack") && !social.contains("Github")) {
 								LOGGER.warn("Skipped shortcode {} in {}", shortcode, url);
 								continue;
 							}
@@ -141,7 +141,7 @@ class EmojiDL {
 							shortcodes.add(discordName);
 						}
 
-						emojis.getEmojiMap().put(subpage, new Emoji(subpage, name, unicode, new ArrayList<>(shortcodes)));
+						emojis.getEmojis().add(new Emoji(subpage, name, unicode, new ArrayList<>(shortcodes)));
 
 						LOGGER.debug("Put {}", name);
 					} catch (Exception e) {
