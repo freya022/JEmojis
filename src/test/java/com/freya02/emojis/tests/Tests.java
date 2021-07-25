@@ -68,7 +68,6 @@ public class Tests {
 	public void emojiMethodsTest() {
 		final Emoji flag_bb = Emojis.ofShortcode("flag_bb");
 
-		assertEquals("Flag: Barbados", flag_bb.name());
 		assertEquals(List.of("\\uD83C", "\\uDDE7", "\\uD83C", "\\uDDE7"), flag_bb.getUTF16());
 		assertEquals(List.of("U+1F1E7", "U+1F1E7"), flag_bb.getUnicodeCodepoints());
 		assertEquals(List.of("1f1e7", "1f1e7"), flag_bb.getHexCodepoints());

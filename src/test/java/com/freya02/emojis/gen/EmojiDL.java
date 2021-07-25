@@ -141,7 +141,7 @@ class EmojiDL {
 							shortcodes.add(discordName);
 						}
 
-						emojis.getEmojis().add(new Emoji(subpage, name, unicode, new ArrayList<>(shortcodes)));
+						emojis.getEmojis().add(new Emoji(subpage, unicode, new ArrayList<>(shortcodes)));
 
 						LOGGER.debug("Put {}", name);
 					} catch (Exception e) {

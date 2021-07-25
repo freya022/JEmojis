@@ -10,13 +10,11 @@ import static com.freya02.emojis.TwemojiType.X72;
 
 public final class Emoji {
 	private final String subpage;
-	private final String name;
 	private final String unicode;
 	private final List<String> shortcodes; //Shortcodes does NOT have : hee
 
-	public Emoji(@NotNull String subpage, @NotNull String name, @NotNull String unicode, @NotNull List<String> shortcodes) {
+	public Emoji(@NotNull String subpage, @NotNull String unicode, @NotNull List<String> shortcodes) {
 		this.subpage = subpage;
-		this.name = name;
 		this.unicode = unicode;
 		this.shortcodes = shortcodes;
 
@@ -29,11 +27,13 @@ public final class Emoji {
 
 	public String subpage() { return subpage; }
 
-	public String name() { return name; }
-
 	public String unicode() { return unicode; }
 
 	public List<String> shortcodes() { return shortcodes; }
+
+	public Action<ExtendedEmoji> retrieveExtendedInfo() {
+		return new ActionImpl<>(() -> ExtendedEmoji.of(this));
+	}
 
 	public List<String> getUTF16() {
 		int[] codepoints = unicode.codePoints().toArray();
@@ -103,7 +103,6 @@ public final class Emoji {
 		Emoji emoji = (Emoji) o;
 
 		if (!subpage.equals(emoji.subpage)) return false;
-		if (!name.equals(emoji.name)) return false;
 		if (!unicode.equals(emoji.unicode)) return false;
 		return shortcodes.equals(emoji.shortcodes);
 	}
@@ -111,7 +110,6 @@ public final class Emoji {
 	@Override
 	public int hashCode() {
 		int result = subpage.hashCode();
-		result = 31 * result + name.hashCode();
 		result = 31 * result + unicode.hashCode();
 		result = 31 * result + shortcodes.hashCode();
 		return result;
@@ -121,7 +119,6 @@ public final class Emoji {
 	public String toString() {
 		return "Emoji{" +
 				"subpage='" + subpage + '\'' +
-				", name='" + name + '\'' +
 				", unicode='" + unicode + '\'' +
 				", shortcodes=" + shortcodes +
 				'}';
