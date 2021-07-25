@@ -1,8 +1,9 @@
 package com.freya02.emojis;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static com.freya02.emojis.TwemojiType.X72;
@@ -13,7 +14,7 @@ public final class Emoji {
 	private final String unicode;
 	private final List<String> shortcodes; //Shortcodes does NOT have : hee
 
-	public Emoji(String subpage, String name, String unicode, List<String> shortcodes) {
+	public Emoji(@NotNull String subpage, @NotNull String name, @NotNull String unicode, @NotNull List<String> shortcodes) {
 		this.subpage = subpage;
 		this.name = name;
 		this.unicode = unicode;
@@ -109,7 +110,6 @@ public final class Emoji {
 
 	@Override
 	public int hashCode() {
-		Objects.hash(subpage, name, unicode, shortcodes);
 		int result = subpage.hashCode();
 		result = 31 * result + name.hashCode();
 		result = 31 * result + unicode.hashCode();
