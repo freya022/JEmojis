@@ -51,6 +51,22 @@ public final class Emoji {
 		return list;
 	}
 
+	public List<Character> getUTF16Unescaped() {
+		int[] codepoints = unicode.codePoints().toArray();
+
+		List<Character> list = new ArrayList<>();
+		for (int codePoint : codepoints) {
+			final char[] chars = Character.toChars(codePoint);
+			for (char aChar : chars) {
+				if (aChar == 0xFE0F) continue; //Skip invisible codepoint which specifies that the preceding character should be displayed with emoji presentation
+
+				list.add(aChar);
+			}
+		}
+
+		return list;
+	}
+
 	public List<String> getUnicodeCodepoints() {
 		return unicode.codePoints()
 				.mapToObj(codepoint -> "U+" + Integer.toHexString(codepoint).toUpperCase())

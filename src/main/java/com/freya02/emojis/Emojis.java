@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Emojis {
 	private static final EmojiStore store;
@@ -18,8 +19,8 @@ public class Emojis {
 		}
 	}
 
-	public static Map<String, Emoji> getEmojis() {
-		return Collections.unmodifiableMap(store.getEmojiMap());
+	public static Set<Emoji> getEmojis() {
+		return Collections.unmodifiableSet(store.getEmojis());
 	}
 
 	public static Emoji ofUnicode(String unicode) {
@@ -39,7 +40,7 @@ public class Emojis {
 		private static final Map<String, Emoji> unicodeMap = new HashMap<>();
 
 		static {
-			for (Emoji emoji : store.getEmojiMap().values()) {
+			for (Emoji emoji : store.getEmojis()) {
 				final Emoji old = unicodeMap.put(emoji.unicode(), emoji);
 				if (old != null) {
 					LOGGER.debug("Duplicate unicode: {} in https://emojipedia.org/{} and https://emojipedia.org/{}, might not be grave", emoji.unicode(), old.subpage(), emoji.subpage());
@@ -55,7 +56,7 @@ public class Emojis {
 		private static final Map<String, Emoji> shortcodeMap = new HashMap<>();
 
 		static {
-			for (Emoji emoji : store.getEmojiMap().values()) {
+			for (Emoji emoji : store.getEmojis()) {
 				for (String shortcode : emoji.shortcodes()) {
 					final Emoji old = shortcodeMap.put(shortcode, emoji);
 					if (old != null) {

@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 public class EmojiStore {
 	private static final Logger LOGGER = Logging.getLogger();
@@ -19,17 +19,17 @@ public class EmojiStore {
 			.setPrettyPrinting()
 			.create();
 
-	private final Map<String, Emoji> emojiMap = new HashMap<>();
+	private final Set<Emoji> emojis = new HashSet<>();
 
 	public static EmojiStore loadLocal() throws IOException {
 		LOGGER.debug("Loading local emojis");
 
 		final EmojiStore store;
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(Utils.getResource("emojis.json")))) {
+		try (BufferedReader reader = new BufferedReader(new InputStreamReader(Utils.getResource("emojis_test.json")))) {
 			store = GSON.fromJson(reader, EmojiStore.class);
 		}
 
-		LOGGER.debug("Loaded {} local emojis", store.getEmojiMap().size());
+		LOGGER.debug("Loaded {} local emojis", store.getEmojis().size());
 
 		return store;
 	}
@@ -40,7 +40,7 @@ public class EmojiStore {
 		if (Files.exists(path)) {
 			final EmojiStore emojis = GSON.fromJson(Files.readString(path), EmojiStore.class);
 
-			LOGGER.debug("Loaded emojis {} from JSON", emojis.emojiMap.size());
+			LOGGER.debug("Loaded emojis {} from JSON", emojis.emojis.size());
 
 			return emojis;
 		} else {
@@ -50,8 +50,8 @@ public class EmojiStore {
 		}
 	}
 
-	public Map<String, Emoji> getEmojiMap() {
-		return emojiMap;
+	public Set<Emoji> getEmojis() {
+		return emojis;
 	}
 
 	public void save(Path path) throws IOException {
@@ -61,6 +61,6 @@ public class EmojiStore {
 
 		Files.writeString(path, json, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
 
-		LOGGER.info("Saved {} emojis", emojiMap.size());
+		LOGGER.info("Saved {} emojis", emojis.size());
 	}
 }
