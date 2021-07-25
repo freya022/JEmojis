@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EmojiParser {
-	private static final Pattern SHORTCODE_PATTERN = Pattern.compile(":([a-z0-9_]+|[+-]1):");
+	private static final Pattern SHORTCODE_PATTERN = Pattern.compile(":(.+?|[+-]1):");
 
 	public static String toUnicode(String str) {
 		final StringBuilder sb = new StringBuilder(str.length());
