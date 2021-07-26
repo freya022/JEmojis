@@ -2,6 +2,7 @@ package com.freya02.emojis.gen;
 
 import com.freya02.emojis.Emoji;
 import com.freya02.emojis.EmojiStore;
+import com.freya02.emojis.HttpUtils;
 import com.freya02.emojis.Logging;
 import org.slf4j.Logger;
 
