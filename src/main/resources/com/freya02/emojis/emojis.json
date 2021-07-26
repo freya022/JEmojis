@@ -12714,6 +12714,355 @@
       "shortcodes": [
         "face_with_symbols_over_mouth"
       ]
+    },
+    {
+      "subpage": "red-heart",
+      "unicode": "❤️",
+      "shortcodes": [
+        "heart"
+      ]
+    },
+    {
+      "subpage": "scissors",
+      "unicode": "✂️",
+      "shortcodes": [
+        "scissors"
+      ]
+    },
+    {
+      "subpage": "black-nib",
+      "unicode": "✒️",
+      "shortcodes": [
+        "black_nib"
+      ]
+    },
+    {
+      "subpage": "orthodox-cross",
+      "unicode": "☦️",
+      "shortcodes": [
+        "orthodox_cross"
+      ]
+    },
+    {
+      "subpage": "heart-exclamation",
+      "unicode": "❣️",
+      "shortcodes": [
+        "heart_exclamation",
+        "heavy_heart_exclamation_mark_ornament"
+      ]
+    },
+    {
+      "subpage": "atom-symbol",
+      "unicode": "⚛️",
+      "shortcodes": [
+        "atom",
+        "atom_symbol"
+      ]
+    },
+    {
+      "subpage": "star-of-david",
+      "unicode": "✡️",
+      "shortcodes": [
+        "star_of_david"
+      ]
+    },
+    {
+      "subpage": "yin-yang",
+      "unicode": "☯️",
+      "shortcodes": [
+        "yin_yang"
+      ]
+    },
+    {
+      "subpage": "eight-pointed-star",
+      "unicode": "✴️",
+      "shortcodes": [
+        "eight_pointed_black_star"
+      ]
+    },
+    {
+      "subpage": "radioactive",
+      "unicode": "☢️",
+      "shortcodes": [
+        "radioactive",
+        "radioactive_sign"
+      ]
+    },
+    {
+      "subpage": "warning",
+      "unicode": "⚠️",
+      "shortcodes": [
+        "warning"
+      ]
+    },
+    {
+      "subpage": "japanese-congratulations-button",
+      "unicode": "㊗️",
+      "shortcodes": [
+        "congratulations"
+      ]
+    },
+    {
+      "subpage": "hot-springs",
+      "unicode": "♨️",
+      "shortcodes": [
+        "hotsprings"
+      ]
+    },
+    {
+      "subpage": "part-alternation-mark",
+      "unicode": "〽️",
+      "shortcodes": [
+        "part_alternation_mark"
+      ]
+    },
+    {
+      "subpage": "fleur-de-lis",
+      "unicode": "⚜️",
+      "shortcodes": [
+        "fleur_de_lis"
+      ]
+    },
+    {
+      "subpage": "eight-spoked-asterisk",
+      "unicode": "✳️",
+      "shortcodes": [
+        "eight_spoked_asterisk"
+      ]
+    },
+    {
+      "subpage": "pause-button",
+      "unicode": "⏸️",
+      "shortcodes": [
+        "pause_button",
+        "double_vertical_bar"
+      ]
+    },
+    {
+      "subpage": "play-button",
+      "unicode": "▶️",
+      "shortcodes": [
+        "arrow_forward"
+      ]
+    },
+    {
+      "subpage": "record-button",
+      "unicode": "⏺️",
+      "shortcodes": [
+        "record_button"
+      ]
+    },
+    {
+      "subpage": "play-or-pause-button",
+      "unicode": "⏯️",
+      "shortcodes": [
+        "play_pause"
+      ]
+    },
+    {
+      "subpage": "left-arrow",
+      "unicode": "⬅️",
+      "shortcodes": [
+        "arrow_left"
+      ]
+    },
+    {
+      "subpage": "down-right-arrow",
+      "unicode": "↘️",
+      "shortcodes": [
+        "arrow_lower_right"
+      ]
+    },
+    {
+      "subpage": "up-down-arrow",
+      "unicode": "↕️",
+      "shortcodes": [
+        "arrow_up_down"
+      ]
+    },
+    {
+      "subpage": "right-arrow-curving-left",
+      "unicode": "↩️",
+      "shortcodes": [
+        "leftwards_arrow_with_hook"
+      ]
+    },
+    {
+      "subpage": "trade-mark",
+      "unicode": "™️",
+      "shortcodes": [
+        "tm"
+      ]
+    },
+    {
+      "subpage": "up-right-arrow",
+      "unicode": "↗️",
+      "shortcodes": [
+        "arrow_upper_right"
+      ]
+    },
+    {
+      "subpage": "registered",
+      "unicode": "®️",
+      "shortcodes": [
+        "registered"
+      ]
+    },
+    {
+      "subpage": "check-box-with-check",
+      "unicode": "☑️",
+      "shortcodes": [
+        "ballot_box_with_check"
+      ]
+    },
+    {
+      "subpage": "black-small-square",
+      "unicode": "▪️",
+      "shortcodes": [
+        "black_small_square"
+      ]
+    },
+    {
+      "subpage": "down-left-arrow",
+      "unicode": "↙️",
+      "shortcodes": [
+        "arrow_lower_left"
+      ]
+    },
+    {
+      "subpage": "right-arrow-curving-up",
+      "unicode": "⤴️",
+      "shortcodes": [
+        "arrow_heading_up"
+      ]
+    },
+    {
+      "subpage": "reverse-button",
+      "unicode": "◀️",
+      "shortcodes": [
+        "arrow_backward"
+      ]
+    },
+    {
+      "subpage": "check-mark",
+      "unicode": "✔️",
+      "shortcodes": [
+        "heavy_check_mark"
+      ]
+    },
+    {
+      "subpage": "down-arrow",
+      "unicode": "⬇️",
+      "shortcodes": [
+        "arrow_down"
+      ]
+    },
+    {
+      "subpage": "kiss-man-man",
+      "unicode": "👨‍❤️‍💋‍👨",
+      "shortcodes": [
+        "kiss_mm",
+        "couplekiss_mm"
+      ]
+    },
+    {
+      "subpage": "kiss-woman-man",
+      "unicode": "👩‍❤️‍💋‍👨",
+      "shortcodes": [
+        "kiss_woman_man"
+      ]
+    },
+    {
+      "subpage": "family-man-woman-boy",
+      "unicode": "👨‍👩‍👦‍👦",
+      "shortcodes": [
+        "family_mwbb"
+      ]
+    },
+    {
+      "subpage": "family-man-woman-girl-boy",
+      "unicode": "👨‍👩‍👧‍👦",
+      "shortcodes": [
+        "family_mwgb"
+      ]
+    },
+    {
+      "subpage": "family-man-girl",
+      "unicode": "👨‍👨‍👧‍👧",
+      "shortcodes": [
+        "family_mmgg"
+      ]
+    },
+    {
+      "subpage": "family-man-woman-girl-boy",
+      "unicode": "👩‍👩‍👦‍👦",
+      "shortcodes": [
+        "family_wwbb"
+      ]
+    },
+    {
+      "subpage": "flag-england",
+      "unicode": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "shortcodes": [
+        "scotland"
+      ]
+    },
+    {
+      "subpage": "family-man-man-boy-boy",
+      "unicode": "👨‍👨‍👦‍👦",
+      "shortcodes": [
+        "family_mmbb"
+      ]
+    },
+    {
+      "subpage": "kiss-woman-man",
+      "unicode": "👩‍❤️‍💋‍👩",
+      "shortcodes": [
+        "kiss_ww",
+        "couplekiss_ww"
+      ]
+    },
+    {
+      "subpage": "flag-wales",
+      "unicode": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      "shortcodes": [
+        "wales"
+      ]
+    },
+    {
+      "subpage": "family-man-woman-girl-boy",
+      "unicode": "👨‍👨‍👧‍👦",
+      "shortcodes": [
+        "family_mmgb"
+      ]
+    },
+    {
+      "subpage": "woman",
+      "unicode": "👩‍👩‍👧‍👧",
+      "shortcodes": [
+        "family_wwgg"
+      ]
+    },
+    {
+      "subpage": "family-man-girl",
+      "unicode": "👨‍👩‍👧‍👧",
+      "shortcodes": [
+        "family_mwgg"
+      ]
+    },
+    {
+      "subpage": "family-man-woman-girl-boy",
+      "unicode": "👩‍👩‍👧‍👦",
+      "shortcodes": [
+        "family_wwgb"
+      ]
+    },
+    {
+      "subpage": "flag-england",
+      "unicode": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "shortcodes": [
+        "england"
+      ]
     }
   ]
 }

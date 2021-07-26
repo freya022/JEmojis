@@ -1,9 +1,6 @@
 package com.freya02.emojis.gen2;
 
-import com.freya02.emojis.Emoji;
-import com.freya02.emojis.EmojiStore;
-import com.freya02.emojis.HttpUtils;
-import com.freya02.emojis.Logging;
+import com.freya02.emojis.*;
 import com.freya02.ui.UILib;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -16,12 +13,13 @@ import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-import okhttp3.*;
+import javafx.util.Pair;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 import org.slf4j.Logger;
 
 import java.io.IOException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -37,6 +35,7 @@ import static com.freya02.emojis.HttpUtils.CLIENT;
 
 class EmojiDL2 {
 	private static final Logger LOGGER = Logging.getLogger();
+	private static final Object MUTEX = new Object[0];
 
 	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/emojis.json");
 	private static final Path SHORTCODES_JSON_PATH = Path.of("data_cache/DiscordShortcodes.json");
@@ -44,7 +43,7 @@ class EmojiDL2 {
 
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
-	private static final ExecutorService es = Executors.newFixedThreadPool(48);
+	private static final ExecutorService es = Executors.newFixedThreadPool(24);
 
 	private final Config config;
 	private final EmojiStore store;
@@ -52,6 +51,8 @@ class EmojiDL2 {
 	private Scroller scroller;
 
 	private int emojiInsertCount = 0;
+
+	private final List<Pair<String, String>> failedEmojis = new ArrayList<>();
 
 	private EmojiDL2(Config config) throws IOException {
 		this.config = config;
@@ -152,6 +153,10 @@ class EmojiDL2 {
 		HttpUtils.shutdown();
 
 		store.save(EMOJIS_JSON_PATH);
+
+		for (Pair<String, String> failedEmoji : failedEmojis) {
+			LOGGER.warn("Failed shortcode: {} => {}", failedEmoji.getKey(), failedEmoji.getValue());
+		}
 	}
 
 	private void makeStrings(List<List<String>> emojis) throws Exception {
@@ -213,9 +218,24 @@ class EmojiDL2 {
 
 					es.submit(() -> {
 						try {
-							store.getEmojis().add(new Emoji(getEmojiSubpage(unicode), unicode, shortcodes));
+							synchronized (MUTEX) {
+								final boolean anyMatch = store.getEmojis().stream().anyMatch(e -> e.unicode().equals(unicode));
+								if (anyMatch) {
+									LOGGER.debug("[{}/{}] Skipped {}", ++emojiInsertCount, emojis.size(), shortcodes.get(0));
 
-							LOGGER.debug("[{}/{}] Added {}", emojiInsertCount++, emojis.size(), shortcodes.get(0));
+									return;
+								}
+							}
+
+							final String emojiSubpage = getEmojiSubpage(unicode);
+
+							synchronized (MUTEX) {
+								store.getEmojis().add(new Emoji(emojiSubpage, unicode, shortcodes));
+
+								LOGGER.debug("[{}/{}] Added {}", ++emojiInsertCount, emojis.size(), shortcodes.get(0));
+							}
+						} catch (IllegalStateException ignored) {
+							failedEmojis.add(new Pair<>(shortcodes.get(0), unicode));
 						} catch (Exception e) {
 							LOGGER.error("Could not add emoji {}", unicode, e);
 						}
@@ -226,26 +246,16 @@ class EmojiDL2 {
 	}
 
 	private String getEmojiSubpage(String unicode) throws IOException {
-		final Call call = CLIENT.newCall(new Request.Builder()
-				.url("https://emojipedia.org/search/?q=" + URLEncoder.encode(unicode, StandardCharsets.UTF_8))
-				.head()
-				.build());
+		final List<SearchResult> results = SearchEngine.findLinks("site:emojipedia.org " + unicode);
 
-		try (Response response = call.execute()) {
-			if (response.isSuccessful()) {
-				final HttpUrl newUrl = response.networkResponse().request().url();
-				if (!newUrl.equals(call.request().url())) {
-					if (!newUrl.pathSegments().isEmpty()) {
-						return newUrl.pathSegments().get(0);
-					} else {
-						throw new IllegalStateException(String.format("Got an unexpected URL '%s' for %s, HTTP code %s", newUrl, unicode, response.code()));
-					}
-				} else {
-					throw new IllegalStateException(String.format("Got the same URL for %s, HTTP code %s", unicode, response.code()));
-				}
-			} else {
-				throw new IllegalStateException(String.format("Got no successful response for %s, HTTP code %s", unicode, response.code()));
-			}
+		for (SearchResult result : results) {
+			final String[] split = result.url().substring(8).split("/");
+
+			if (split.length != 2) continue;
+
+			return split[1];
 		}
+
+		throw new IllegalStateException("No subpage for emoji " + unicode + " :(");
 	}
 }
