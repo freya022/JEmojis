@@ -19,7 +19,6 @@ class Cache implements Closeable {
 	private final Path cachePath;
 	private final boolean zip;
 
-	@SuppressWarnings("RedundantCast")
 	Cache(boolean zip) throws IOException {
 		this.zip = zip;
 
