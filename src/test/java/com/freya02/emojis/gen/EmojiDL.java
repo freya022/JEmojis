@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 class EmojiDL {
 	private static final Logger LOGGER = Logging.getLogger();
 
-	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/emojis.json");
+	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/emojis_old.json");
 
 	private static final Pattern EMOJI_TABLE_PATTERN = Pattern.compile("<ul class=\"emoji-grid\">(\\X+?)</ul>");
 	private static final Pattern EMOJI_LINE_PATTERN = Pattern.compile("<li(?> class=\"lazyparent\")?>(\\X+?)</li>");

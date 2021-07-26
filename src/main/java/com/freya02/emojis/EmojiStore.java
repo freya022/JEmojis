@@ -25,7 +25,7 @@ public class EmojiStore {
 		LOGGER.debug("Loading local emojis");
 
 		final EmojiStore store;
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(Utils.getResource("emojis_test.json")))) {
+		try (BufferedReader reader = new BufferedReader(new InputStreamReader(Utils.getResource("emojis.json")))) {
 			store = GSON.fromJson(reader, EmojiStore.class);
 		}
 

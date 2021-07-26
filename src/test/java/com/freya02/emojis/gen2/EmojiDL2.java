@@ -38,7 +38,7 @@ import static com.freya02.emojis.HttpUtils.CLIENT;
 class EmojiDL2 {
 	private static final Logger LOGGER = Logging.getLogger();
 
-	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/emojis_test.json");
+	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/emojis.json");
 	private static final Path SHORTCODES_JSON_PATH = Path.of("data_cache/DiscordShortcodes.json");
 	private static final Path CONFIG_PATH = Path.of("Config.json");
 
