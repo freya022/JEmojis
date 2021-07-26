@@ -6,13 +6,11 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.image.Image;
-import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Shape;
 import javafx.scene.transform.Transform;
 import okhttp3.Call;
-import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.jetbrains.annotations.NotNull;
@@ -25,43 +23,93 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * <b>You need to install dependencies in order to use this class</b>
+ * <ul>
+ *     <li>org.openjfx:javafx-graphics:18-ea+1</li>
+ *     <li>org.openjfx:javafx-swing:18-ea+1</li>
+ * </ul>
+ * <p>
+ * Provides utilities to render an {@link Emoji} at any size and with any background color, on either an AWT {@link BufferedImage}, or a JavaFX {@link Image}
+ * <br><b>It is recommended you reuse this instance on a single thread as to limit resource usage</b>
+ */
 public class EmojiRenderer {
-	private static final OkHttpClient client = new OkHttpClient.Builder().build();
-
 	static {
 		PlatformImpl.startup(() -> {}, false);
 	}
 
 	private String url;
 
-	private WritableImage image;
+//	private WritableImage image;
 	private Color backgroundColor = Color.TRANSPARENT;
 	private int size = 72;
 
+	/**
+	 * Sets the {@link Emoji} to render
+	 *
+	 * @param emoji The {@link Emoji} to render
+	 * @return This instance for chaining purposes
+	 */
 	public EmojiRenderer setEmoji(Emoji emoji) {
 		url = emoji.getTwemojiImageUrl(TwemojiType.SVG);
 
 		return this;
 	}
 
+	/**
+	 * Sets the render size
+	 * <br>The render size is only <b>best effort</b> and <b>does not</b> mean the emoji will be at this size
+	 * <br>Though, the difference is only gonna be +-1 pixel on the width/height
+	 * <br>Additionally, <b>rendered emojis are not square</b>
+	 *
+	 * @param size The render size
+	 * @return This instance for chaining purposes
+	 */
 	public EmojiRenderer setSize(int size) {
 		this.size = size;
 
 		return this;
 	}
 
+	/**
+	 * Sets the background color of this renderer
+	 *
+	 * @param backgroundColor The color to use as a background
+	 * @return This instance for chaining purposes
+	 */
 	public EmojiRenderer setBackgroundColor(Color backgroundColor) {
 		this.backgroundColor = backgroundColor;
 
 		return this;
 	}
 
-	public EmojiRenderer setImage(WritableImage image) {
-		this.image = image;
+	/**
+	 * Sets the background color of this renderer
+	 *
+	 * @param backgroundColor The color to use as a background
+	 * @return This instance for chaining purposes
+	 */
+	public EmojiRenderer setBackgroundColor(java.awt.Color backgroundColor) {
+		this.backgroundColor = Color.rgb(backgroundColor.getRed(),
+				backgroundColor.getGreen(),
+				backgroundColor.getBlue(),
+				backgroundColor.getAlpha() / 255.0);
 
 		return this;
 	}
 
+//	May be unsafe
+//	public EmojiRenderer setImage(WritableImage image) {
+//		this.image = image;
+//
+//		return this;
+//	}
+
+	/**
+	 * Returns an action which will render the emoji with the specified parameters
+	 *
+	 * @return An {@link Action} to render this emoji
+	 */
 	public Action<Image> render() {
 		return new ActionImpl<>(this::doRender);
 	}
@@ -88,7 +136,7 @@ public class EmojiRenderer {
 					params.setFill(backgroundColor);
 					params.setTransform(Transform.scale(size / 36.0, size / 36.0));
 
-					future.complete(pane.snapshot(params, image));
+					future.complete(pane.snapshot(params, null));
 				} catch (Throwable e) {
 					future.completeExceptionally(new RuntimeException("Unable to render SVG of url " + url, e));
 				}
@@ -102,7 +150,7 @@ public class EmojiRenderer {
 
 	@NotNull
 	private List<Shape> getShapes() throws IOException {
-		final Call call = client.newCall(new Request.Builder()
+		final Call call = HttpUtils.CLIENT.newCall(new Request.Builder()
 				.url(url)
 				.build());
 
@@ -115,10 +163,20 @@ public class EmojiRenderer {
 		}
 	}
 
+	/**
+	 * Returns an action which will render the emoji with the specified parameters
+	 *
+	 * @return An {@link Action} to render this emoji
+	 */
 	public Action<BufferedImage> renderAwt() {
 		return render().flatMap(img -> SwingFXUtils.fromFXImage(img, null));
 	}
 
+	/**
+	 * Returns an action which will render the emoji with the specified parameters
+	 *
+	 * @return An {@link Action} to render this emoji
+	 */
 	public Action<byte[]> renderBytes() {
 		return renderAwt().flatMap(img -> {
 			try {
