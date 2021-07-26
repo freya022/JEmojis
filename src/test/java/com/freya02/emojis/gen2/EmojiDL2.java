@@ -2,6 +2,7 @@ package com.freya02.emojis.gen2;
 
 import com.freya02.emojis.Emoji;
 import com.freya02.emojis.EmojiStore;
+import com.freya02.emojis.HttpUtils;
 import com.freya02.emojis.Logging;
 import com.freya02.ui.UILib;
 import com.google.gson.Gson;
@@ -15,20 +16,24 @@ import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import okhttp3.ResponseBody;
+import okhttp3.*;
 import org.slf4j.Logger;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+
+import static com.freya02.emojis.HttpUtils.CLIENT;
 
 class EmojiDL2 {
 	private static final Logger LOGGER = Logging.getLogger();
@@ -37,15 +42,21 @@ class EmojiDL2 {
 	private static final Path SHORTCODES_JSON_PATH = Path.of("data_cache/DiscordShortcodes.json");
 	private static final Path CONFIG_PATH = Path.of("Config.json");
 
-	private static final OkHttpClient CLIENT = new OkHttpClient.Builder().build();
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
+	private static final ExecutorService es = Executors.newFixedThreadPool(48);
+
 	private final Config config;
+	private final EmojiStore store;
 
 	private Scroller scroller;
 
-	private EmojiDL2(Config config) {
+	private int emojiInsertCount = 0;
+
+	private EmojiDL2(Config config) throws IOException {
 		this.config = config;
+
+		store = EmojiStore.load(EMOJIS_JSON_PATH);
 	}
 
 	public static void main(String[] args) {
@@ -57,20 +68,19 @@ class EmojiDL2 {
 			LOGGER.warn("Channel ID: {}", config.getChannelId());
 			LOGGER.warn("Make sure you have these information correct, as well as having all the strings in the specified channel");
 			LOGGER.warn("\tYou have to use a debugger to correctly copy the strings in Discord, STARTING FROM THE STRING 0, before the program can retrieve them");
-			LOGGER.warn("Please type OK to continue, SKIP to skip shortcodes gathering, or something else to abort");
+			LOGGER.warn("Please type OK to continue, SKIP to skip shortcodes gathering, SKIP ALL to also skip the unicode gathering, or something else to abort");
 			final Scanner scanner = new Scanner(System.in);
-			final String next = scanner.next();
+			final String next = scanner.nextLine();
 
-			if (!next.equals("OK") && !next.equals("SKIP")) {
+			final boolean skip = next.equals("SKIP");
+			final boolean skip_all = next.equals("SKIP ALL");
+			if (!next.equals("OK") && !skip && !skip_all) {
 				System.exit(-42);
 
 				return;
 			}
 
-			new EmojiDL2(config).run(next.equals("SKIP"));
-
-			CLIENT.dispatcher().executorService().shutdownNow();
-			CLIENT.connectionPool().evictAll();
+			new EmojiDL2(config).run(skip || skip_all, skip_all);
 		} catch (Exception e) {
 			LOGGER.error("An exception occurred while getting emojis", e);
 
@@ -80,7 +90,7 @@ class EmojiDL2 {
 		System.exit(0);
 	}
 
-	private void run(boolean skip) throws Exception {
+	private void run(boolean skip, boolean skipAll) throws Exception {
 		ArrayList<List<String>> emojis = null;
 
 		if (skip) {
@@ -129,8 +139,19 @@ class EmojiDL2 {
 		}
 
 		if (emojis != null) {
-			makeStrings(emojis);
+			if (skipAll) {
+				retrieveUnicodes(emojis);
+			} else {
+				makeStrings(emojis);
+			}
 		}
+
+		es.shutdown();
+		es.awaitTermination(1, TimeUnit.DAYS);
+
+		HttpUtils.shutdown();
+
+		store.save(EMOJIS_JSON_PATH);
 	}
 
 	private void makeStrings(List<List<String>> emojis) throws Exception {
@@ -163,8 +184,6 @@ class EmojiDL2 {
 	}
 
 	private void retrieveUnicodes(List<List<String>> emojis) throws Exception {
-		final EmojiStore store = EmojiStore.load(EMOJIS_JSON_PATH);
-
 		final Request request = new Request.Builder()
 				.url("https://discord.com/api/v8/channels/" + config.getChannelId() + "/messages")
 				.header("Authorization", "Bot " + config.getToken())
@@ -192,11 +211,41 @@ class EmojiDL2 {
 							.map(s -> s.substring(1, s.length() - 1))
 							.collect(Collectors.toList());
 
-					store.getEmojis().add(new Emoji("None", unicode, shortcodes));
+					es.submit(() -> {
+						try {
+							store.getEmojis().add(new Emoji(getEmojiSubpage(unicode), unicode, shortcodes));
+
+							LOGGER.debug("[{}/{}] Added {}", emojiInsertCount++, emojis.size(), shortcodes.get(0));
+						} catch (Exception e) {
+							LOGGER.error("Could not add emoji {}", unicode, e);
+						}
+					});
 				}
 			}
 		}
+	}
 
-		store.save(EMOJIS_JSON_PATH);
+	private String getEmojiSubpage(String unicode) throws IOException {
+		final Call call = CLIENT.newCall(new Request.Builder()
+				.url("https://emojipedia.org/search/?q=" + URLEncoder.encode(unicode, StandardCharsets.UTF_8))
+				.head()
+				.build());
+
+		try (Response response = call.execute()) {
+			if (response.isSuccessful()) {
+				final HttpUrl newUrl = response.networkResponse().request().url();
+				if (!newUrl.equals(call.request().url())) {
+					if (!newUrl.pathSegments().isEmpty()) {
+						return newUrl.pathSegments().get(0);
+					} else {
+						throw new IllegalStateException(String.format("Got an unexpected URL '%s' for %s, HTTP code %s", newUrl, unicode, response.code()));
+					}
+				} else {
+					throw new IllegalStateException(String.format("Got the same URL for %s, HTTP code %s", unicode, response.code()));
+				}
+			} else {
+				throw new IllegalStateException(String.format("Got no successful response for %s, HTTP code %s", unicode, response.code()));
+			}
+		}
 	}
 }
