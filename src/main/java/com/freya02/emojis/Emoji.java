@@ -11,7 +11,7 @@ import static com.freya02.emojis.TwemojiType.X72;
 public final class Emoji {
 	private final String subpage;
 	private final String unicode;
-	private final List<String> shortcodes; //Shortcodes does NOT have : hee
+	private final List<String> shortcodes; //Shortcodes does NOT have :
 
 	public Emoji(@NotNull String subpage, @NotNull String unicode, @NotNull List<String> shortcodes) {
 		this.subpage = subpage;
