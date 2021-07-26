@@ -10,17 +10,19 @@ import java.util.Set;
 
 public class Emojis {
 	private static final EmojiStore store;
+	private static final Set<Emoji> emojiView;
 
 	static {
 		try {
 			store = EmojiStore.loadLocal();
+			emojiView = Collections.unmodifiableSet(store.getEmojis());
 		} catch (IOException e) {
 			throw new RuntimeException("Unable to load emojis", e);
 		}
 	}
 
 	public static Set<Emoji> getEmojis() {
-		return Collections.unmodifiableSet(store.getEmojis());
+		return emojiView;
 	}
 
 	public static Emoji ofUnicode(String unicode) {
