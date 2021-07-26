@@ -73,5 +73,7 @@ public class Tests {
 		assertEquals(List.of("1f1e7", "1f1e7"), flag_bb.getHexCodepoints());
 		assertEquals("https://raw.githubusercontent.com/twitter/twemoji/master/assets/72x72/1f1e7-1f1e7.png", flag_bb.getTwemojiImageUrl(TwemojiType.X72));
 		assertEquals("https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f1e7-1f1e7.svg", flag_bb.getTwemojiImageUrl(TwemojiType.SVG));
+
+		assertEquals("Flag: Barbados", flag_bb.retrieveExtendedInfo().complete().getName());
 	}
 }
