@@ -10,14 +10,14 @@ public class EmojiParser {
 	private static final Pattern SHORTCODE_PATTERN = Pattern.compile(":(.+?|[+-]1):");
 
 	/**
-	 * Replaces unicode emojis by their shortcode equivalent
+	 * Replaces shortcode emojis to their unicode equivalent
 	 * <br>Example:
-	 * <br><code>foo 😂 bar</code>
-	 * <br>V
 	 * <br><code>foo :joy: bar</code>
+	 * <br>V
+	 * <br><code>foo 😂 bar</code>
 	 *
-	 * @param str The string with unicode emojis to replace
-	 * @return A new string with the emojis replaced with their shortcodes
+	 * @param str The string with shortcode emojis to replace
+	 * @return A new string with the emojis shortcode replaced with their unicode
 	 */
 	public static String toUnicode(String str) {
 		final StringBuilder sb = new StringBuilder(str.length());
