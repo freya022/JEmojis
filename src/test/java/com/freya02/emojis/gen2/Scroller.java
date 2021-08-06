@@ -98,7 +98,7 @@ class Scroller {
 					if (shouldBreak) break;
 				}
 			} catch (Exception e) {
-				e.printStackTrace();
+				LOGGER.error("An exception occurred while scrolling for emojis", e);
 			} finally {
 				long end = System.nanoTime();
 
