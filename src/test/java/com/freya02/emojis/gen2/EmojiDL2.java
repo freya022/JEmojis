@@ -1,7 +1,7 @@
 package com.freya02.emojis.gen2;
 
 import com.freya02.emojis.*;
-import com.freya02.ui.UILib;
+import com.freya02.emojis.utils.UILib;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import javafx.event.Event;

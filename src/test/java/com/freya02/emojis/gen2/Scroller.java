@@ -1,7 +1,7 @@
 package com.freya02.emojis.gen2;
 
 import com.freya02.emojis.Logging;
-import com.freya02.ui.UILib;
+import com.freya02.emojis.utils.UILib;
 import javafx.application.Platform;
 import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
