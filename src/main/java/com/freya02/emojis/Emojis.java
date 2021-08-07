@@ -39,15 +39,17 @@ public class Emojis {
 	 * @return An {@link Emoji} with the matching unicode, or <code>null</code> if not found
 	 */
 	public static Emoji ofUnicode(String unicode) {
-		String unFritzedUnicode = unicode;
+		String sanitizedUnicode = unicode
+				.replace("\uFE0E", "")
+				.replace("\uFE0F", "");
 		if (unicode.codePoints().count() > 0) {
 			for (Fritzpatrick fritz : Fritzpatrick.values()) {
-				unFritzedUnicode = unicode.replace(fritz.getUnicode(), "");
-				if (unFritzedUnicode.length() != unicode.length()) break;
+				sanitizedUnicode = unicode.replace(fritz.getUnicode(), "");
+				if (sanitizedUnicode.length() != unicode.length()) break;
 			}
 		}
 
-		return UnicodeHolder.unicodeMap.get(unFritzedUnicode);
+		return UnicodeHolder.unicodeMap.get(sanitizedUnicode);
 	}
 
 	/**
@@ -70,7 +72,10 @@ public class Emojis {
 
 		static {
 			for (Emoji emoji : store.getEmojis()) {
-				final Emoji old = unicodeMap.put(emoji.unicode(), emoji);
+				final String sanitized = emoji.unicode()
+						.replace("\uFE0E", "")
+						.replace("\uFE0F", "");
+				final Emoji old = unicodeMap.put(sanitized, emoji);
 				if (old != null) {
 					LOGGER.debug("Duplicate unicode: {} in https://emojipedia.org/{} and https://emojipedia.org/{}, might not be grave", emoji.unicode(), old.subpage(), emoji.subpage());
 				}
