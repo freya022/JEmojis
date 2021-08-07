@@ -62,13 +62,23 @@ public class Emojis {
 
 		static {
 			for (Emoji emoji : store.getEmojis()) {
-				final Emoji old = unicodeMap.put(emoji.unicode(), emoji);
-				if (old != null) {
-					LOGGER.debug("Duplicate unicode: {} in https://emojipedia.org/{} and https://emojipedia.org/{}, might not be grave", emoji.unicode(), old.subpage(), emoji.subpage());
+				if (emoji.doesSupportFitzpatrick()) {
+					for (Fritzpatrick type : Fritzpatrick.values()) {
+						putEmojiInUnicodeMap(emoji.asFritzpatrick(type));
+					}
 				}
+
+				putEmojiInUnicodeMap(emoji);
 			}
 
 			LOGGER.debug("Loaded unicode map");
+		}
+
+		private static void putEmojiInUnicodeMap(Emoji emoji) {
+			final Emoji old = unicodeMap.put(emoji.unicode(), emoji);
+			if (old != null) {
+				LOGGER.debug("Duplicate unicode: {} in https://emojipedia.org/{} and https://emojipedia.org/{}, might not be grave", emoji.unicode(), old.subpage(), emoji.subpage());
+			}
 		}
 	}
 

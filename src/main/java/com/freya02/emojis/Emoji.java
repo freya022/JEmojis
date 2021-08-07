@@ -38,14 +38,18 @@ public final class Emoji {
 	 *
 	 * @return The subpage of Emojipedia.org for this emoji
 	 */
-	public String subpage() { return subpage; }
+	public String subpage() {
+		return subpage;
+	}
 
 	/**
 	 * Returns the Unicode for this emoji, such as <code>😂</code>
 	 *
 	 * @return The Unicode for this emoji
 	 */
-	public String unicode() { return unicode; }
+	public String unicode() {
+		return unicode;
+	}
 
 	/**
 	 * Returns the shortcodes for this emoji, such as <code>joy</code>
@@ -53,11 +57,13 @@ public final class Emoji {
 	 *
 	 * @return A list of shortcodes for this emoji
 	 */
-	public List<String> shortcodes() { return shortcodes; }
+	public List<String> shortcodes() {
+		return shortcodes;
+	}
 
 	/**
 	 * Returns whether this emoji supports fitzpatrick (skin color changes)
-	 * 
+	 *
 	 * @return <code>true</code> if the emoji can have a skin tone applied
 	 */
 	public boolean doesSupportFitzpatrick() {
@@ -206,5 +212,16 @@ public final class Emoji {
 				", shortcodes=" + shortcodes +
 				", supportsFitzpatrick=" + supportsFitzpatrick +
 				'}';
+	}
+
+	public Emoji asFritzpatrick(Fritzpatrick type) {
+		StringBuilder sb = new StringBuilder(unicode);
+		sb.insert(2, type.getUnicode());
+		return new Emoji(
+				subpage,
+				sb.toString(),
+				List.copyOf(shortcodes),
+				false
+		);
 	}
 }
