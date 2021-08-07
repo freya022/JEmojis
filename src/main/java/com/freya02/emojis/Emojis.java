@@ -39,7 +39,15 @@ public class Emojis {
 	 * @return An {@link Emoji} with the matching unicode, or <code>null</code> if not found
 	 */
 	public static Emoji ofUnicode(String unicode) {
-		return UnicodeHolder.unicodeMap.get(unicode);
+		String unFritzedUnicode = unicode;
+		if (unicode.codePoints().count() > 0) {
+			for (Fritzpatrick fritz : Fritzpatrick.values()) {
+				unFritzedUnicode = unicode.replace(fritz.getUnicode(), "");
+				if (unFritzedUnicode.length() != unicode.length()) break;
+			}
+		}
+
+		return UnicodeHolder.unicodeMap.get(unFritzedUnicode);
 	}
 
 	/**
@@ -62,23 +70,13 @@ public class Emojis {
 
 		static {
 			for (Emoji emoji : store.getEmojis()) {
-				if (emoji.doesSupportFitzpatrick()) {
-					for (Fritzpatrick type : Fritzpatrick.values()) {
-						putEmojiInUnicodeMap(emoji.asFritzpatrick(type));
-					}
+				final Emoji old = unicodeMap.put(emoji.unicode(), emoji);
+				if (old != null) {
+					LOGGER.debug("Duplicate unicode: {} in https://emojipedia.org/{} and https://emojipedia.org/{}, might not be grave", emoji.unicode(), old.subpage(), emoji.subpage());
 				}
-
-				putEmojiInUnicodeMap(emoji);
 			}
 
 			LOGGER.debug("Loaded unicode map");
-		}
-
-		private static void putEmojiInUnicodeMap(Emoji emoji) {
-			final Emoji old = unicodeMap.put(emoji.unicode(), emoji);
-			if (old != null) {
-				LOGGER.debug("Duplicate unicode: {} in https://emojipedia.org/{} and https://emojipedia.org/{}, might not be grave", emoji.unicode(), old.subpage(), emoji.subpage());
-			}
 		}
 	}
 
