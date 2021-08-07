@@ -4,6 +4,7 @@ import com.freya02.emojis.Emoji;
 import com.freya02.emojis.EmojiStore;
 import com.freya02.emojis.HttpUtils;
 import com.freya02.emojis.Logging;
+import com.freya02.emojis.utils.Cache;
 import org.slf4j.Logger;
 
 import java.io.IOException;
@@ -142,7 +143,7 @@ class EmojiDL {
 							shortcodes.add(discordName);
 						}
 
-						emojis.getEmojis().add(new Emoji(subpage, unicode, new ArrayList<>(shortcodes)));
+						emojis.getEmojis().add(new Emoji(subpage, unicode, new ArrayList<>(shortcodes), false));
 
 						LOGGER.debug("Put {}", name);
 					} catch (Exception e) {

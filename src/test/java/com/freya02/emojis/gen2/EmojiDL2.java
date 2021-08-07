@@ -1,6 +1,10 @@
 package com.freya02.emojis.gen2;
 
-import com.freya02.emojis.*;
+import com.freya02.emojis.Emoji;
+import com.freya02.emojis.EmojiStore;
+import com.freya02.emojis.HttpUtils;
+import com.freya02.emojis.Logging;
+import com.freya02.emojis.utils.Cache;
 import com.freya02.emojis.utils.UILib;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,12 +18,15 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.util.Pair;
+import okhttp3.Call;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import org.slf4j.Logger;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -38,7 +45,7 @@ class EmojiDL2 {
 	private static final Object MUTEX = new Object[0];
 
 	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/emojis.json");
-	private static final Path SHORTCODES_JSON_PATH = Path.of("data_cache/DiscordShortcodes.json");
+	private static final Path SHORTCODES_JSON_PATH = Path.of("data_cache/PartialDiscordEmojis.json");
 	private static final Path CONFIG_PATH = Path.of("Config.json");
 
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
@@ -47,6 +54,7 @@ class EmojiDL2 {
 
 	private final Config config;
 	private final EmojiStore store;
+	private final Cache cache;
 
 	private Scroller scroller;
 
@@ -57,7 +65,16 @@ class EmojiDL2 {
 	private EmojiDL2(Config config) throws IOException {
 		this.config = config;
 
-		store = EmojiStore.load(EMOJIS_JSON_PATH);
+		this.cache = new Cache(true);
+		this.store = EmojiStore.load(EMOJIS_JSON_PATH);
+		
+		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+			try {
+				cache.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}));
 	}
 
 	public static void main(String[] args) {
@@ -92,15 +109,14 @@ class EmojiDL2 {
 	}
 
 	private void run(boolean skip, boolean skipAll) throws Exception {
-		ArrayList<List<String>> emojis = null;
+		PartialDiscordEmojis emojis = null;
 
 		if (skip) {
 			if (Files.notExists(SHORTCODES_JSON_PATH)) {
 				skip = false;
 				LOGGER.warn("Could not skip shortcodes gathering as the shortcodes JSON doesn't exist at {}", SHORTCODES_JSON_PATH.toAbsolutePath());
 			} else {
-				//noinspection unchecked
-				emojis = GSON.fromJson(Files.readString(SHORTCODES_JSON_PATH), ArrayList.class);
+				emojis = GSON.fromJson(Files.readString(SHORTCODES_JSON_PATH), PartialDiscordEmojis.class);
 			}
 		}
 
@@ -133,7 +149,7 @@ class EmojiDL2 {
 			});
 
 			if (scroller != null) {
-				emojis = new ArrayList<>(scroller.getShortcodes());
+				emojis = new PartialDiscordEmojis(scroller.getDiscordEmojis());
 
 				Files.writeString(SHORTCODES_JSON_PATH, GSON.toJson(emojis));
 			}
@@ -159,11 +175,11 @@ class EmojiDL2 {
 		}
 	}
 
-	private void makeStrings(List<List<String>> emojis) throws Exception {
+	private void makeStrings(PartialDiscordEmojis emojis) throws Exception {
 		@SuppressWarnings("MismatchedQueryAndUpdateOfCollection") final List<String> strings = new ArrayList<>();
 		final StringBuilder sb = new StringBuilder();
-		for (List<String> shortcodes : emojis) {
-			String shortcode = shortcodes.get(0) + ' ';
+		for (PartialDiscordEmoji emoji : emojis) {
+			String shortcode = emoji.getShortcodes().get(0) + ' ';
 
 			if (sb.length() + shortcode.length() > 2048) {
 				strings.add(sb.toString());
@@ -188,7 +204,7 @@ class EmojiDL2 {
 		retrieveUnicodes(emojis);
 	}
 
-	private void retrieveUnicodes(List<List<String>> emojis) throws Exception {
+	private void retrieveUnicodes(PartialDiscordEmojis emojis) throws Exception {
 		final Request request = new Request.Builder()
 				.url("https://discord.com/api/v8/channels/" + config.getChannelId() + "/messages")
 				.header("Authorization", "Bot " + config.getToken())
@@ -211,7 +227,9 @@ class EmojiDL2 {
 				final String msg = (String) messages.get(i).get("content");
 
 				for (String unicode : msg.split(" ")) {
-					final List<String> shortcodes = emojis.get(index++)
+					final PartialDiscordEmoji partialDiscordEmoji = emojis.get(index++);
+					final List<String> shortcodes = partialDiscordEmoji
+							.getShortcodes()
 							.stream()
 							.map(s -> s.substring(1, s.length() - 1))
 							.collect(Collectors.toList());
@@ -230,7 +248,7 @@ class EmojiDL2 {
 							final String emojiSubpage = getEmojiSubpage(unicode);
 
 							synchronized (MUTEX) {
-								store.getEmojis().add(new Emoji(emojiSubpage, unicode, shortcodes));
+								store.getEmojis().add(new Emoji(emojiSubpage, unicode, shortcodes, partialDiscordEmoji.doesSupportFitzpatrick()));
 
 								LOGGER.debug("[{}/{}] Added {}", ++emojiInsertCount, emojis.size(), shortcodes.get(0));
 							}
@@ -246,16 +264,16 @@ class EmojiDL2 {
 	}
 
 	private String getEmojiSubpage(String unicode) throws IOException {
-		final List<SearchResult> results = SearchEngine.findLinks("site:emojipedia.org " + unicode);
+		final String encodedUnicode = URLEncoder.encode(unicode, StandardCharsets.UTF_8);
+		return cache.computeIfAbsent("https://emojipedia.org/search/?q=" + encodedUnicode, encodedUnicode + "-subpage-name", url -> {
+			final Call call = CLIENT.newCall(new Request.Builder()
+					.url(url)
+					.get()
+					.build());
 
-		for (SearchResult result : results) {
-			final String[] split = result.url().substring(8).split("/");
-
-			if (split.length != 2) continue;
-
-			return split[1];
-		}
-
-		throw new IllegalStateException("No subpage for emoji " + unicode + " :(");
+			try (Response response = call.execute()) {
+				return response.request().url().pathSegments().get(0);
+			}
+		});
 	}
 }

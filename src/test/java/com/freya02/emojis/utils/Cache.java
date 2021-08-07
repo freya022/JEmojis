@@ -1,4 +1,4 @@
-package com.freya02.emojis.gen;
+package com.freya02.emojis.utils;
 
 import com.freya02.emojis.HttpUtils;
 import com.freya02.emojis.Logging;
@@ -13,13 +13,13 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.Map;
 
-class Cache implements Closeable {
+public class Cache implements Closeable {
 	private static final Logger LOGGER = Logging.getLogger();
 
 	private final Path cachePath;
 	private final boolean zip;
 
-	Cache(boolean zip) throws IOException {
+	public Cache(boolean zip) throws IOException {
 		this.zip = zip;
 
 		Path path = Path.of("data_cache");
@@ -39,11 +39,11 @@ class Cache implements Closeable {
 		}
 	}
 
-	String computeIfAbsent(String url, PageSupplier supplier) throws IOException {
+	public String computeIfAbsent(String url, PageSupplier supplier) throws IOException {
 		Path path = getUrlPath(url);
 
 		if (Files.notExists(path)) {
-			LOGGER.trace("Downloading {} at {}", url, path);
+			LOGGER.trace("Downloading url {} at {}", url, path);
 
 			String page = supplier.get(url);
 
@@ -57,8 +57,28 @@ class Cache implements Closeable {
 			return Files.readString(path);
 		}
 	}
+	
+	public String computeIfAbsent(String url, String pageName, PageSupplier supplier) throws IOException {
+		Path path = cachePath.resolve(pageName);
 
-	Path getUrlPath(String url) {
+		if (Files.notExists(path)) {
+			LOGGER.trace("Downloading page named {} at {}", pageName, path);
+
+			String page = supplier.get(url);
+
+			if (path.getParent() != null) Files.createDirectories(path.getParent());
+			
+			Files.writeString(path, page, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+
+			return page;
+		} else {
+			LOGGER.trace("Reading {}", path);
+
+			return Files.readString(path);
+		}
+	}
+
+	public Path getUrlPath(String url) {
 		Path p = cachePath;
 
 		for (String s : HttpUtils.getPageName(url).split("/")) {

@@ -5,6 +5,7 @@
 .idea
 target
 /src/test/java/other
+/src/test/java/com/freya02/emojis/gen2/cache
 
 logs-*
 data_cache

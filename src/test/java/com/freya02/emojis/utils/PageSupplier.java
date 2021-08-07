@@ -1,7 +1,7 @@
-package com.freya02.emojis.gen;
+package com.freya02.emojis.utils;
 
 import java.io.IOException;
 
-interface PageSupplier {
+public interface PageSupplier {
 	String get(String url) throws IOException;
 }

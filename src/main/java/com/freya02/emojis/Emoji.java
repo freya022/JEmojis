@@ -18,11 +18,13 @@ public final class Emoji {
 	private final String subpage;
 	private final String unicode;
 	private final List<String> shortcodes; //Shortcodes does NOT have :
+	private final boolean supportsFitzpatrick;
 
-	public Emoji(@NotNull String subpage, @NotNull String unicode, @NotNull List<String> shortcodes) {
+	public Emoji(@NotNull String subpage, @NotNull String unicode, @NotNull List<String> shortcodes, boolean supportsFitzpatrick) {
 		this.subpage = subpage;
 		this.unicode = unicode;
 		this.shortcodes = shortcodes;
+		this.supportsFitzpatrick = supportsFitzpatrick;
 
 		for (String shortcode : shortcodes) {
 			if (shortcode.contains(":")) {
@@ -52,6 +54,15 @@ public final class Emoji {
 	 * @return A list of shortcodes for this emoji
 	 */
 	public List<String> shortcodes() { return shortcodes; }
+
+	/**
+	 * Returns whether this emoji supports fitzpatrick (skin color changes)
+	 * 
+	 * @return <code>true</code> if the emoji can have a skin tone applied
+	 */
+	public boolean doesSupportFitzpatrick() {
+		return supportsFitzpatrick;
+	}
 
 	/**
 	 * Returns an Action to retrieve the extended info of this emoji
@@ -172,6 +183,7 @@ public final class Emoji {
 
 		Emoji emoji = (Emoji) o;
 
+		if (supportsFitzpatrick != emoji.supportsFitzpatrick) return false;
 		if (!subpage.equals(emoji.subpage)) return false;
 		if (!unicode.equals(emoji.unicode)) return false;
 		return shortcodes.equals(emoji.shortcodes);
@@ -182,6 +194,7 @@ public final class Emoji {
 		int result = subpage.hashCode();
 		result = 31 * result + unicode.hashCode();
 		result = 31 * result + shortcodes.hashCode();
+		result = 31 * result + (supportsFitzpatrick ? 1 : 0);
 		return result;
 	}
 
@@ -191,6 +204,7 @@ public final class Emoji {
 				"subpage='" + subpage + '\'' +
 				", unicode='" + unicode + '\'' +
 				", shortcodes=" + shortcodes +
+				", supportsFitzpatrick=" + supportsFitzpatrick +
 				'}';
 	}
 }

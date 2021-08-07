@@ -13,21 +13,23 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class Scroller {
 	private static final Logger LOGGER = Logging.getLogger();
 
-	private static final Pattern EMOJI_PATTERN = Pattern.compile("<span id=\"emoji-picker-list-row-item-.*?\" style=\"position: absolute; top: -999999px;\">(.*?)</span>");
+	private static final Pattern EMOJI_PATTERN = Pattern.compile("<span id=\"emoji-picker-list-row-item-(.*?)\" style=\"position: absolute; top: -999999px;\">(.*?)</span>");
 	private static final Pattern SCROLLER_PATTERN = Pattern.compile("<div class=\"(scroller-.*? list-.*? thin-.*? scrollerBase-.*?)\".*?\"></div>");
 
-	private static final double FRAME_WAIT = 10.0;
-	private static final double DELAY_MS = 1000.0 / (60.0 / FRAME_WAIT);
+//	private static final double FRAME_WAIT = 60.0;
+//	private static final double DELAY_MS = 1000.0 / (60.0 / FRAME_WAIT);
 	private static final int STEP = 90;
 
 	//The user could have "most used" emojis that would cause duplicates, so we use a Set to deduplicate shortcode lists
-	private final Set<List<String>> shortcodes = new LinkedHashSet<>();
+	private final Set<PartialDiscordEmoji> discordEmojis = new LinkedHashSet<>();
 
 	private final Matcher emojiMatcher = EMOJI_PATTERN.matcher("");
 
@@ -36,6 +38,8 @@ class Scroller {
 	private final JSObject pickerGrid;
 
 	private int y = STEP;
+	
+	private boolean stop, stopped;
 
 	Scroller(Stage stage, WebEngine engine) throws IllegalStateException {
 		this.stage = stage;
@@ -57,8 +61,8 @@ class Scroller {
 
 		this.scroller = (JSObject) scrollers.getSlot(0);
 
-		LOGGER.debug("{} frames of delay", FRAME_WAIT);
-		LOGGER.debug("{} ms delay", DELAY_MS);
+//		LOGGER.debug("{} frames of delay", FRAME_WAIT);
+//		LOGGER.debug("{} ms delay", DELAY_MS);
 	}
 
 	//ok so basically, we search for emojis on every frame,
@@ -74,14 +78,17 @@ class Scroller {
 			long start = System.nanoTime();
 
 			try {
-				while (true) {
-					boolean shouldBreak = UILib.runAndWait(() -> {
+				while (!stopped) {
+					UILib.runAndWait(() -> {
 						final String gridHtml = (String) pickerGrid.getMember("innerHTML");
 
 						int count = 0;
 						emojiMatcher.reset(gridHtml);
 						while (emojiMatcher.find()) {
-							if (shortcodes.add(Arrays.asList(emojiMatcher.group(1).split(" ")))) {
+							final boolean supportsFitzpatrick = emojiMatcher.group(1).contains("::skin-tone-");
+							final List<String> shortcodes = Arrays.asList(emojiMatcher.group(2).split(" "));
+							
+							if (discordEmojis.add(new PartialDiscordEmoji(shortcodes, supportsFitzpatrick))) {
 								count++;
 							}
 						}
@@ -89,13 +96,9 @@ class Scroller {
 						if (count != 0) { //If emoji found, they must have loaded
 							LOGGER.info("Got {} new emojis", count);
 
-							return !scroll();
+							scroll();
 						}
-
-						return false;
 					});
-
-					if (shouldBreak) break;
 				}
 			} catch (Exception e) {
 				LOGGER.error("An exception occurred while scrolling for emojis", e);
@@ -109,29 +112,33 @@ class Scroller {
 		}).start();
 	}
 
-	public Set<List<String>> getShortcodes() {
-		return shortcodes;
+	public Set<PartialDiscordEmoji> getDiscordEmojis() {
+		return discordEmojis;
 	}
 
 	/**
 	 * <code>true to continue scrolling</code>
 	 */
-	private boolean scroll() {
+	private void scroll() {
+		if (stop) return;
+		
 		double oldScrollTop = (int) scroller.getMember("scrollTop");
 		scroller.call("scrollTo", 0, y);
 		double newScrollTop = (int) scroller.getMember("scrollTop");
 
-		if (oldScrollTop + STEP > newScrollTop || oldScrollTop == newScrollTop) {
-			final long shortcodeCount = shortcodes.stream().mapToLong(List::size).sum();
-			LOGGER.info("Finished scrolling ! Got {} emojis for {} shortcodes", shortcodes.size(), shortcodeCount);
-			LOGGER.info("\t If the number of emojis does not correspond to what has been manually counted, you should reduce the step");
-
-			return false;
+		if (!stop && (oldScrollTop + STEP > newScrollTop || oldScrollTop == newScrollTop)) {
+			stop = true;
+			
+			Executors.newScheduledThreadPool(1).schedule(() -> {
+				final long shortcodeCount = discordEmojis.stream().mapToLong(de -> de.getShortcodes().size()).sum();
+				LOGGER.info("Finished scrolling ! Got {} emojis for {} shortcodes", discordEmojis.size(), shortcodeCount);
+				LOGGER.info("\t If the number of emojis does not correspond to what has been manually counted, it *may* mean the scroller didn't capture the last emojis, in which case you should up the scheduler delay");
+				
+				stopped = true;
+			}, 1, TimeUnit.SECONDS);
 		}
 
 		y += STEP;
-
-		return true;
 	}
 
 	@NotNull
