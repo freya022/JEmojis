@@ -214,9 +214,19 @@ public final class Emoji {
 				'}';
 	}
 
+	/**
+	 * @throws IllegalStateException | when the current unicode is empty
+	 * @return New emoji object of current emoji + fritzpatrick type
+	 */
 	public Emoji asFritzpatrick(Fritzpatrick type) {
 		StringBuilder sb = new StringBuilder(unicode);
-		sb.insert(2, type.getUnicode());
+
+		if (unicode.codePoints().count() == 0) throw new IllegalStateException("Emoji has no unicode representation.");
+		int firstCodePoint = unicode.codePointAt(0);
+
+		char[] chars = Character.toChars(firstCodePoint);
+		sb.insert(chars.length > 1 ? 2 : 1, type.getUnicode());
+
 		return new Emoji(
 				subpage,
 				sb.toString(),
