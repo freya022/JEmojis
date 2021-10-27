@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
@@ -25,7 +26,7 @@ public class EmojiStore {
 		LOGGER.debug("Loading local emojis");
 
 		final EmojiStore store;
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(Utils.getResource("emojis.json")))) {
+		try (BufferedReader reader = new BufferedReader(new InputStreamReader(Utils.getResource("emojis.json"), StandardCharsets.UTF_8))) {
 			store = GSON.fromJson(reader, EmojiStore.class);
 		}
 
