@@ -44,7 +44,7 @@ class EmojiDL2 {
 	private static final Logger LOGGER = Logging.getLogger();
 	private static final Object MUTEX = new Object[0];
 
-	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/emojis.json");
+	private static final Path EMOJIS_JSON_PATH = Path.of("src/main/resources/com/freya02/emojis/JEmojis.json");
 	private static final Path SHORTCODES_JSON_PATH = Path.of("data_cache/PartialDiscordEmojis.json");
 	private static final Path CONFIG_PATH = Path.of("Config.json");
 
